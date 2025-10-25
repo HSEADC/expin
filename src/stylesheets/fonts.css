@@ -1,34 +1,27 @@
-/* @font-face{
-    font-family: 'PT Root UI';
-    src: url('../fonts/pt-root-ui_bold.woff'),
-        url('../fonts/pt-root-ui_bold.woff2');
-    font-weight: 700;
-}
-@font-face{
-    font-family: 'PT Root UI';
-    src: url('../fonts/pt-root-ui_medium.woff'),
-        url('../fonts/pt-root-ui_medium.woff2');
-    font-weight: 500;
-}
-@font-face{
-    font-family: 'PT Root UI';
-    src: url('../fonts/pt-root-ui_regular.woff'),
-        url('../fonts/pt-root-ui_regular.woff2');
-    font-weight: 400;
-}
-@font-face{
-    font-family: 'PT Root UI';
-    src: url('../fonts/pt-root-ui_light.woff'),
-        url('../fonts/pt-root-ui_light.woff2');
-    font-weight: 300;
-} */
+
 @font-face {
-  font-family: 'Handil Pro';
-  src: url('../fonts/HandilPro-Medium.woff');
-  font-weight: 500;
+  font-family: 'HandilPro';
+  src: url('../fonts/HandilPro-Medium.woff') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-  font-family: 'IdealistSans';
-  src: url('../fonts/IdealistSans-Light.woff');
-  font-weight: 300;
+  font-family: 'Idealist';
+  src: url('../fonts/IdealistSans-Light.woff') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  font-family: 'Idealist', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, .headline, .big {
+  font-family: 'HandilPro', 'Idealist', sans-serif;
+  font-weight: 700;
 }

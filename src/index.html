@@ -1,52 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
-    <link rel="stylesheet" href="stylesheets/index.css" />
-    <link rel="stylesheet" href="stylesheets/fonts.css" />
-  </head>
-  <body>
-    <h1>Главная</h1>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EXPIN</title>
 
-    <ul>
-      <li><a href="pages/articles.html">Статьи</a></li>
-      <li><a href="pages/guides.html">Гайды</a></li>
-      <li><a href="pages/tests.html">Тест</a></li>
-    </ul>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/Group 2087329148.png" />
 
-    <!-- subscribe section -->
-    <section class="subscribe-section">
-      <div class="center-block">
-        <h1>Хочешь получать вдохновение первым?</h1>
-        <p>
-          Подпишись на обновление EXPIN <br />
-          Всегда бесплатно. Отпишитесь от рассылки в любое время.
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">EXPIN</div>
+
+      <a class="more" href="mainpage.html" aria-label="Перейти на главную страницу">
+        [ Узнать больше ]
+      </a>
+
+      <nav class="social">
+        <a class="icon" href="https://t.me/ex_pin" target="_blank" rel="noopener" aria-label="Telegram">
+          <img src="img/tg.svg" alt="Telegram" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main class="hero">
+    <div class="hero-container hero__inner">
+      <!-- Левая часть с изображением -->
+      <section class="left-copy">
+        <img
+          class="headline-img"
+          src="img/Group 6.png"
+          alt="Насмотренность — это не про моду. Это про взгляд."
+        />
+      </section>
+
+      <!-- Правая часть с формой -->
+      <section class="right-copy" id="learn-more">
+        <p class="tagline">
+          <span class="row">В мире, полном</span>
+          <span class="row">визуального шума, важно</span>
+          <span class="row">не кричать — а видеть.</span>
         </p>
-      </div>
-    </section>
 
-    <!-- footer section -->
-    <section class="footer-section">
-      <div class="logo-and-slogan">
-        <p class="logo">EXPIN</p>
-        <p class="slogan">Медиа, которое вдохновляет</p>
+        <form
+          class="subscribe"
+          id="subscribe-form"
+          action="https://formspree.io/f/xqayrvyy"
+          method="POST"
+        >
+          <div class="input-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Подпишись чтобы изучить (email)"
+              required
+            />
+            <button class="arrow" type="submit" aria-label="Отправить">
+              <img class="arrow-icon" src="img/strelka.png" alt="Отправить" />
+            </button>
+          </div>
+
+          <p class="form-status" id="form-status"></p>
+
+          <!-- скрытые поля для Formspree -->
+          <input type="hidden" name="_subject" value="Новая подписка с сайта EXPIN" />
+          <input type="hidden" name="_language" value="ru" />
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== JS: отправка формы ===== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("subscribe-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { "Accept": "application/json" }
+          });
+
+          if (response.ok) {
+            status.textContent = "Почта отправлена!";
+            status.classList.add("success");
+            form.reset();
+          } else {
+            status.textContent = "Ошибка. Попробуйте снова.";
+            status.classList.add("error");
+          }
+        } catch {
+          status.textContent = "Ошибка сети. Попробуйте позже.";
+          status.classList.add("error");
+        }
+      });
+    });
+  </script>
+
+  <!-- ===== BOTTOM STRIP ===== -->
+  <section class="bottom-strip">
+    <div class="container bottom-strip__inner">
+      <div class="big big-left">EX</div>
+
+      <div class="thumbs">
+        <div class="thumb">
+          <img class="slide is-active" src="img/Screenshot 2025-10-21 at 14.51.03 1.png" alt="Референс 1" loading="lazy" />
+          <img class="slide" src="img/Screenshot 2025-10-21 at 19.56.17 1.png" alt="Референс 2" loading="lazy" />
+          <img class="slide" src="img/Screenshot 2025-10-21 at 19.57.14 1.png" alt="Референс 3" loading="lazy" />
+        </div>
+
+        <div class="thumb">
+          <img class="slide is-active" src="img/Screenshot 2025-10-21 at 14.52.42 1.png" alt="Референс 4" loading="lazy" />
+          <img class="slide" src="img/Screenshot 2025-10-07 at 16.03.31 1.png" alt="Референс 5" loading="lazy" />
+          <img class="slide" src="img/Screenshot 2025-10-21 at 21.34.08 1.png" alt="Референс 6" loading="lazy" />
+        </div>
       </div>
-      <div class="menu">
-        <a href="">О нас</a>
-        <a href="">Статьи</a>
-        <a href="">Гайды</a>
-        <a href="">Тест</a>
-      </div>
-      <div class="socials">
-        <a href=""
-          ><img src="../src/images/TelegramVector.svg" alt="логотип телеграм"
-        /></a>
-        <a href=""
-          ><img src="../src/images/VK-Vector2.svg" alt="логотип вконтакте"
-        /></a>
-      </div>
-    </section>
-  </body>
+
+      <div class="big big-right">PIN</div>
+    </div>
+  </section>
+
+  <!-- Основной JS -->
+  <script src="./javascripts/index.js"></script>
+</body>
 </html>
