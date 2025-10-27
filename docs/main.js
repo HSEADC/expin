@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("hey")})();
+(()=>{"use strict";!function(){const t=document.querySelectorAll(".thumb");t.forEach((t,e)=>{const s=Array.from(t.querySelectorAll(".slide"));if(s.length<=1)return;let c=0;const r=t=>{s.forEach(t=>t.classList.remove("is-active")),s[t].classList.add("is-active")};r(0),setTimeout(()=>{setInterval(()=>{c=(c+1)%s.length,r(c)},1500)},400*e)})}()})();
