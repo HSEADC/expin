@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EXPIN — Квиз</title>
+
+
+</head>
+<body class="quizPage">
+
+<!-- ===== FIXED MENU ===== -->
+  <nav class="siteMenu" aria-label="Меню разделов">
+    <div class="siteMenu__inner">
+      <a class="siteMenu__brand" href="../../index.html">EXPIN</a>
+      <div class="siteMenu__links">
+        <a href="../../index.html">Главная</a>
+        <a href="../../pages/articles.html">Статьи</a>
+        <a href="../../pages/guides.html">Гайды</a>
+        <a href="../../pages/tests.html">Тест</a>
+      </div>
+      <a class="siteMenu__tg"
+         href="https://t.me/ex_pin"
+         target="_blank"
+         rel="noopener"
+         aria-label="Telegram">
+        <img src="../../img/tg.svg" alt="">
+      </a>
+    </div>
+  </nav>
+
+  <main class="quizApp" id="quizApp">
+
+    <!-- ===== SCREEN 0: START ===== -->
+    <section class="quizScreen is-active" data-screen="0">
+      <div class="quizScreen__inner quizScreen__inner--start">
+        <h1 class="quizStart__title">НАЧАТЬ КВИЗ</h1>
+
+        <button class="quizStart__btn" id="quizStartBtn" type="button">
+          вперед к вопросам!
+        </button>
+
+ 
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 1 ===== -->
+    <section class="quizScreen" data-screen="1">
+      <div class="quizScreen__inner">
+        <h2 class="quizQuestion__title">
+          ЧТО ОСТАЛОСЬ С ТОБОЙ<br>
+          ПОСЛЕ ПРОЧТЕНИЯ ЭТОЙ<br>
+          СТАТЬИ?
+        </h2>
+
+        <div class="quizQuestion__meta">
+          <span>1 ВОПРОС (ИЗ ВСЕГО 4)</span>
+          <span>ВСПОМНИ ВСЕ ЧТО УЗНАЛ</span>
+        </div>
+
+        <div class="quizDecor">
+          <img class="quizDecor__img quizDecor__img--1" src="../../img/quiz/04bd1d7f78049d621761a701bbe104b8-Photoroom 1.png" alt="">
+          <img class="quizDecor__img quizDecor__img--2" src="../../img/quiz/41c68b2e88ef40af3345ba0cd8c10171-Photoroom (1) 1.png" alt="">
+          <img class="quizDecor__img quizDecor__img--3" src="../../img/quiz/590bdfae8b47560dffda1c024845944f-Photoroom.png" alt="">
+          <img class="quizDecor__img quizDecor__img--4" src="../../img/quiz/6ff3ee1d1eaacf38e85fe7587af4e8ea-Photoroom 1.png" alt="">
+          <img class="quizDecor__img quizDecor__img--5" src="../../img/quiz/7208caec8ee56ef86770144f05a68235-Photoroom 1.png" alt="">
+          <img class="quizDecor__img quizDecor__img--6" src="../../img/quiz/c8793c6819782595ac39db42425b3301-Photoroom.png" alt="">
+          <img class="quizDecor__img quizDecor__img--7" src="../../img/quiz/Try-Photoroom.png" alt="">
+
+        </div>
+
+        <div class="quizAnswers">
+          <label class="quizCheck">
+            <input type="checkbox" name="q1" value="Образ и визуализация">
+            <span>Образ и визуализация</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q1" value="Ощущение и состояние">
+            <span>Ощущение и состояние</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q1" value="Мысли и формулировки">
+            <span>Мысли и формулировки</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q1" value="Пока тяжело сформулировать">
+            <span>Пока тяжело сформулировать</span>
+          </label>
+        </div>
+
+        <button class="quizActionBtn" data-next="2" type="button">
+          <span>ОТВЕТИТЬ</span>
+          <span>OK</span>
+        </button>
+
+
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 2 ===== -->
+    <section class="quizScreen" data-screen="2">
+      <div class="quizScreen__inner">
+        <h2 class="quizQuestion__title">
+          ГДЕ УЖЕ ТЫ ВСТРЕЧАЛСЯ<br>
+          С ПРОЧИТАННЫМ?
+        </h2>
+
+        <div class="quizQuestion__meta">
+          <span>2 ВОПРОС (ОСТАЛОСЬ 3)</span>
+          <span>ПОДУМАЙ О СВОЕМ ПРОШЛОМ ОПЫТЕ</span>
+        </div>
+
+        <div class="quizDecor">
+          <img class="quizDecor__img quizDecor__img--1" src="../../img/quiz/000000000 1.png" alt="">
+          <img class="quizDecor__img quizDecor__img--2" src="../../img/quiz/6666.png" alt="">
+          <img class="quizDecor__img quizDecor__img--3" src="../../img/quiz/9999 1.png" alt="">
+          <img class="quizDecor__img quizDecor__img--4" src="../../img/quiz/88888.png" alt="">
+          <img class="quizDecor__img quizDecor__img--5" src="../../img/quiz/88889.png" alt="">
+          <img class="quizDecor__img quizDecor__img--6" src="../../img/quiz/c8793c6819782595ac39db42425b3301-Photoroom.png" alt="">
+          <img class="quizDecor__img quizDecor__img--7" src="../../img/img_webp/c2991e01dcc3d0030c59fb65efc40d52-Photoroom 2.webp" alt="">
+        </div>
+
+        <div class="quizAnswers">
+          <label class="quizCheck">
+            <input type="checkbox" name="q2" value="В том, что происходит каждый день">
+            <span>В том, что происходит каждый день</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q2" value="В том, что я уже делаю">
+            <span>В том, что я уже делаю</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q2" value="В том, что я видел у других">
+            <span>В том, что я видел у других</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q2" value="Пока не встречал">
+            <span>Пока не встречал</span>
+          </label>
+        </div>
+
+        <button class="quizActionBtn" data-next="3" type="button">
+          <span>ОТВЕТИТЬ</span>
+          <span>OK</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 3 ===== -->
+    <section class="quizScreen" data-screen="3">
+      <div class="quizScreen__inner">
+        <h2 class="quizQuestion__title">
+          ЧТО ТЫ БУДЕШЬ ДЕЛАТЬ<br>
+          ДАЛЬШЕ?
+        </h2>
+
+        <div class="quizQuestion__meta">
+          <span>3 ВОПРОС (УЖЕ 3)</span>
+          <span>КАК ТЫ ИСПОЛЬЗУЕШЬ НОВОЕ ЗНАНИЕ</span>
+        </div>
+
+        <div class="quizDecor">
+          <img class="quizDecor__img quizDecor__img--1" src="../../img/quiz/_ (2) copy 3 1-Photoroom.png" alt="">
+          <img class="quizDecor__img quizDecor__img--2" src="../../img/quiz/63f488226dac27e65e9b001f4ec0516c-Photoroom.png" alt="">
+          <img class="quizDecor__img quizDecor__img--3" src="../../img/quiz/1111.png" alt="">
+          <img class="quizDecor__img quizDecor__img--4" src="../../img/quiz/5555.png" alt="">
+          <img class="quizDecor__img quizDecor__img--5" src="../../img/quiz/7777.png" alt="">
+          <img class="quizDecor__img quizDecor__img--6" src="../../img/quiz/33333.png" alt="">
+          <img class="quizDecor__img quizDecor__img--7" src="../../img/quiz/ol;[ 1.png" alt="">
+        </div>
+
+        <div class="quizAnswers">
+          <label class="quizCheck">
+            <input type="checkbox" name="q3" value="Внимательно смотреть по сторонам">
+            <span>Внимательно смотреть по сторонам</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q3" value="Начну фиксировать">
+            <span>Начну фиксировать</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q3" value="Применю в новых проектах">
+            <span>Применю в новых проектах</span>
+          </label>
+
+          <label class="quizCheck">
+            <input type="checkbox" name="q3" value="Оставлю для лучшего случая">
+            <span>Оставлю для лучшего случая</span>
+          </label>
+        </div>
+
+        <button class="quizActionBtn" data-next="4" type="button">
+          <span>ОТВЕТИТЬ</span>
+          <span>OK</span>
+        </button>
+
+    
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 4 ===== -->
+    <section class="quizScreen" data-screen="4">
+      <div class="quizScreen__inner">
+        <h2 class="quizQuestion__title">
+          ЗАПИШИ ВЕЩЬ, КОТОРУЮ<br>
+          МОЖНО ИСПОЛЬЗОВАТЬ<br>
+          ДЛЯ ТВОИХ ПРОЕКТОВ.
+        </h2>
+
+       
+
+        <div class="quizNoteWrap">
+          <textarea
+            id="quizIdeaInput"
+            class="quizIdeaInput"
+            placeholder="можно сделать полку с красными наперстками и..."
+          ></textarea>
+        </div>
+
+        <button class="quizActionBtn quizActionBtn--long" id="saveQuizIdeaBtn" type="button">
+          <span>ЗАПОМНИ ИДЕЮ И БЕГИ РЕАЛИЗОВЫВАТЬ</span>
+          <span>OK</span>
+        </button>
+
+    </section>
+
+    <!-- ===== SCREEN 5: FINAL ===== -->
+    <section class="quizScreen" data-screen="5">
+        <div class="quizScreen__inner">
+      
+          <h2 class="quizFinalHead__title">
+            ГЕНЕРАЦИЯ ИДЕИ<br>
+            ЗАВЕРШЕНА!
+          </h2>
+      
+          <div class="quizFinalNotes">
+            <div class="quizFinalNotes__inner" id="quizNotesList"></div>
+          </div>
+      
+        </div>
+      </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../javascripts/test-quiz.js"></script>
+</body>
+</html>

@@ -1,55 +1,146 @@
-/* ===== Страница тестов ===== */
+.articlesPage{
+  min-height: 100vh;
+  background: #F3F3F0;
+}
 
-.tests-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.articlesHero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #F3F3F0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  cursor: none;
+}
+
+.articlesHero__title{
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(60px, 10vw, 170px);
+  line-height: 0.95;
+  color: #151313;
+  pointer-events: none;
+}
+
+.articlesHero__cursorLayer{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.articlesHero__trailItem{
+  position: absolute;
+  width: clamp(120px, 14vw, 220px);
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.12));
+  transition: opacity 0.45s ease;
+}
+
+.articlesHero__trailItem.is-fade{
+  opacity: 0;
+}
+
+.articlesHero__preload{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* ===== PANEL 2 ===== */
+.tPanel--desc{
+  background: #F3F3F0;
+  z-index: 2;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.tDesc{
+  min-height: 100vh;
+  padding-top: clamp(120px, 18vh, 220px);
+  padding-bottom: 140px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.tDesc__bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     
+  pointer-events: none;
+  user-select: none;
+}
+
+.tDesc__content{
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, 92vw);   /* контейнер НЕ меньше кнопки */
+  margin: 0 auto;
+
+  display: flex;              /* вместо grid */
+  flex-direction: column;
+  align-items: center;
+}
+
+.tDesc__text{
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-size: clamp(16px, 2.5vw, 30px);
+  line-height: 1.25;
+  margin: 0;   
+  transform: translateX(12px);               /* текст не двигаем */
+}
+
+.tCta{
+  width: min(1100px, 92vw);   /* может быть шире текста — ок */
+  margin-top: clamp(40px, 6vw, 90px); /* только расстояние */
+  background: #FFFF5D;
   
-  /* Главный заголовок */
-  .tests-title {
-    font-family: 'HandilPro', sans-serif;
-    font-size: clamp(32px, 4vw, 48px);
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  
-  /* Подзаголовок */
-  .tests-subtitle {
-    font-family: 'Newton', serif;
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 600;
-    margin-bottom: 32px;
-    text-align: center;
-  }
-  
-  /* Список тестов */
-  .tests-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-    max-width: 600px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-  }
-  
-  /* Ссылки-тесты */
-  .test-link {
-    font-family: 'Newton', serif;
-    font-size: clamp(18px, 2vw, 22px);
-    color: #111;
-    text-decoration: none;
-    font-weight: 600;
-    transition: opacity 0.2s ease;
-  }
-  
-  .test-link:hover {
-    opacity: 0.6;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(36px, 5vw, 70px) clamp(40px, 6vw, 80px);
+  text-decoration: none;
+  color: #151313;
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+
+.testsStack{
+  position: relative;
+  height: 230vh; /* медленнее всплывает второй экран */
+  background: #F3F3F0;
+}
+
+.tPanel{
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}

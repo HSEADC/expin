@@ -1,59 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Статьи — EXPIN</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EXPIN — Статьи</title>
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <link rel="stylesheet" href="../stylesheets/style.css" />
+  <link rel="stylesheet" href="../stylesheets/articles.css" />
 </head>
 <body>
+  
+  <!-- хедер как на всём сайте -->
+  <nav class="siteMenu" aria-label="Меню разделов">
+    <div class="siteMenu__inner">
+      <a class="siteMenu__brand" href="../index.html">EXPIN</a>
 
-<!-- ===== HEADER ===== -->
-<header class="header">
-    <div class="container header__inner">
-  
-      <a href="./mainpage.html" class="logo1">EXPIN</a>
-  
-      <nav class="main-nav">
-        <a href="./mainpage.html" class="nav-link">Главная</a>
-        <a href="./articles.html" class="nav-link">Статьи</a>
-        <a href="./guides.html" class="nav-link">Гайды</a>
-        <a href="./tests.html" class="nav-link">Тесты</a>
-      </nav>
-  
-      <nav class="social">
-        <a class="icon" href="https://t.me/ex_pin" target="_blank" aria-label="Telegram">
-          <img src="../img/tg.svg" alt="Telegram">
-        </a>
-      </nav>
-  
+      <div class="siteMenu__links">
+        <a href="../index.html">Главная</a>
+        <a href="../pages/articles.html">Статьи</a>
+        <a href="../pages/guides.html">Гайды</a>
+        <a href="../pages/tests.html">Тест</a>
+      </div>
+
+      <a class="siteMenu__tg"
+         href="https://t.me/ex_pin"
+         target="_blank"
+         rel="noopener"
+         aria-label="Telegram">
+        <img src="../img/tg.svg" alt="">
+      </a>
     </div>
-  </header>
-  <main class="articles-page">
+  </nav>
 
-    <h1 class="articles-title">Статьи</h1>
-  
-  
-  
-    <ul class="articles-list">
-      <li><a href="./articles/article1.html" class="article-link">Статья про насмотренность и вкус</a></li>
-      <li><a href="./articles/article2.html" class="article-link">Статья про повседневное вдохновение</a></li>
-      <li><a href="./articles/article3.html" class="article-link">Подборка про внимание к деталям</a></li>
-    </ul>
-  
-    <section class="hero">
-      <img 
-        class="hero-image1" 
-        src="../img/img_webp/push-1764008448 1.webp" 
-        alt="EXPIN визуальный образ"
-      >
+  <main class="articlesPage">
+    
+    <div class="articlesStack" id="articlesStack">
+      <section class="articlesHero articlesPanel articlesPanel--hero" id="articlesHero">
+      <h1 class="articlesHero__title">СТАТЬИ</h1>
+    
+      <div class="articlesHero__cursorLayer" id="cursorLayer"></div>
+    
+      <div class="articlesHero__preload" aria-hidden="true">
+        <img src="../img/cursor/cursor1.png" alt="">
+        <img src="../img/cursor/cursor2.png" alt="">
+        <img src="../img/cursor/cursor3.png" alt="">
+        <img src="../img/cursor/cursor4.png" alt="">
+        <img src="../img/cursor/cursor5.png" alt="">
+        <img src="../img/cursor/cursor6.png" alt="">
+        <img src="../img/cursor/cursor7.png" alt="">
+        <img src="../img/cursor/cursor8.png" alt="">
+        <img src="../img/cursor/cursor9.png" alt="">
+        <img src="../img/cursor/cursor10.png" alt="">
+        <img src="../img/cursor/cursor11.png" alt="">
+        <img src="../img/cursor/cursor12.png" alt="">
+        <img src="../img/cursor/cursor13.png" alt="">
+        <img src="../img/cursor/cursor14.png" alt="">
+        <img src="../img/cursor/cursor15.png" alt="">
+        <img src="../img/cursor/cursor16.png" alt="">
+        <img src="../img/cursor/cursor17.png" alt="">
+        <img src="../img/cursor/cursor18.png" alt="">
+        <img src="../img/cursor/cursor19.png" alt="">
+        <img src="../img/cursor/cursor20.png" alt="">
+      </div>
     </section>
+    
+    
 
+    <section class="articlesCardsBlock articlesPanel articlesPanel--cards" id="articlesCardsBlock">
+      <div class="articlesCardsBlock__inner">
+    
+        <p class="articlesCardsBlock__topText">
+          ДАННЫЕ СТАТЬИ СОЗДАНЫ ДЛЯ ТОГО, ЧТО БЫ ВЫ НИКОГДА<br>
+          НЕ ЗАБЫВАЛИ,
+        </p>
+    
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--1" src="../img/1212 2.png" alt="" aria-hidden="true">
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--2" src="../img/65f0bee7629bcce3a7002e0c3eb46996-Photoroom 1.png" alt="" aria-hidden="true">
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--3" src="../img/974126511.png" alt="" aria-hidden="true">
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--4" src="../img/9999 1.png" alt="" aria-hidden="true">
+    
+        <div class="articlesSlider" id="articlesSlider">
+          <div class="articlesSlider__track" id="articlesSliderTrack">
+    
+            <a class="articleSlide" href="../pages/articles/article1.html" data-index="0">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card1.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Внимание к деталям. Как оно помогает в жизни?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article2.html" data-index="1">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card2.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Повседневное вдохновение. Где искать?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article3.html" data-index="2">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card3.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Образы.<br> 
+                  Как создавать образы <br> из простого?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article4.html" data-index="3">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card4.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Маленькие радости.<br> 
+                  Почему важно искать позитив?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article5.html" data-index="4">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card5.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Насмотренность и вкус. <br>
+                  Как развить?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article6.html" data-index="5">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card6.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Навыки.<br> Как использовать знания?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
 
+            <a class="articleSlide" href="../pages/articles/article7.html" data-index="6">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card7.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Ошибки. <br> Как они становятся композоцией?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article8.html" data-index="7">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card8.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Голос города. <br> Случайная типографика.</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/articles/article9.html" data-index="8">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card9.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Изобилие идей.<br>
+                  Как не запутаться в мыслях?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
 
+            <a class="articleSlide" href="../pages/articles/article10.html" data-index="9">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card10.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Случайность.<br>Красота там, где её не планировали.</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+            <a class="articleSlide" href="../pages/articles/article11.html" data-index="10">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card11.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Обычные вещи.<br>
+                  Как найти новые смыслы?</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>            
+            <a class="articleSlide" href="../pages/articles/article12.html" data-index="11">           
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/articles/card12.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Паттерн.<br>
+                  Повторение как визуальный язык.</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+            <a class="articleSlide" href="../pages/articles/article13.html" data-index="12">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card13.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Знания. <br>Как показать свои навыки?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+
+          <a class="articleSlide" href="../pages/articles/article14.html" data-index="13">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card14.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Простота<br> Наивный дизайн, который работает.</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article15.html" data-index="14">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card15.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Структуризация.<br>
+                Нужно ли делать проект понятнее?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article16.html" data-index="15">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card16.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Приукрашивание.<br>Можно ли разукрасить этот мир?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article17.html" data-index="16">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card17.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Эстетика. <br>
+                Как определить, что тебя вдохновляет?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article18.html" data-index="17">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card18.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Восприятие.<br>
+                Где границы того, что мы видим?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article19.html" data-index="18">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card19.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Темп.<br> Как скорость влияет на идею?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article20.html" data-index="19">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card20.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Молчание.<br> Можно ли сделать паузу содержанием?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article21.html" data-index="20">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card21.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Контроль.<br> Управлять ли процессом до конца?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article22.html" data-index="21">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card22.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Это моё.<br> Почему что-то цепляет, а что-то нет.</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article23.html" data-index="22">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card23.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Неровность.<br>Откуда берётся ощущение живого?.</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article24.html" data-index="23">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card24.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Скука. <br>Может ли она быть полезной?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article25.html" data-index="24">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card25.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Ожидание. <br>Почему мы боимся начать?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article26.html" data-index="25">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card26.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Сравнение. <br>Почему чужое кажется лучше?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="articleSlide" href="../pages/articles/article27.html" data-index="26">           
+            <div class="articleSlide__media">
+              <img class="articleSlide__img" src="../img/articles/card27.png" alt="">
+            </div>
+            <div class="articleSlide__body">
+              <h3 class="articleSlide__title">Интерес. <br>Откуда он вообще берётся?</h3>
+            </div>
+            <div class="articleSlide__cta">
+              <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+</div>
+        
+    
+        <p class="articlesCardsBlock__bottomText">
+          ЧТО УРОНИВ БОЛЬШУЮ ИДЕЮ НА ПОЛ, ВЫ МОЖЕТЕ НАЙТИ ТАМ<br>
+          МАЛЕНЬКУЮ, КОТОРАЯ ПОДОЙДЁТ ЛУЧШЕ!
+        </p>
+    
+      </div>
+    </section>
+<!-- ===== FOOTER ===== -->
+<footer class="siteFooter articlesPanel articlesPanel--footer" id="siteFooter">
+  <div class="siteFooter__inner">
+
+    <nav class="siteFooter__nav" aria-label="Footer menu">
+      <a href="../index.html">Главная</a>
+      <a href="../pages/articles.html">Статьи</a>
+      <a href="../pages/guides.html">Гайды</a>
+      <a href="../pages/tests.html">Тест</a>
+      <a class="siteFooter__tg" href="https://t.me/ex_pin" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../img/tg.svg" alt="">
+      </a>
+    </nav>
+    <div class="siteFooter__brand" aria-label="EXPIN">
+      <img class="siteFooter__logo"
+           src="../img/img_webp/Expin copy.webp"
+           alt="EXPIN">
+    
+      <img class="siteFooter__shark"
+           src="../img/img_webp/63f488226dac27e65e9b001f4ec0516c-Photoroom.webp"
+           alt=""
+           aria-hidden="true">
+    </div>
+
+    <div class="siteFooter__bottom">
+      <div class="siteFooter__bottomLeft">медиа, которое вдохновляет</div>
+      <div class="siteFooter__bottomCenter">Я попросил мозг быть креативным. Он предложил поспать.</div>
+      <div class="siteFooter__bottomRight">Бабушкина / Самсонова / Иванова</div>
+    </div>
+  </div>
+  </div>
+</footer>
+</div>
   </main>
-  
-  <script src="../javascripts/index.js"></script>  
 
+  <script src="../javascripts/articles.js"></script>
 </body>
 </html>
