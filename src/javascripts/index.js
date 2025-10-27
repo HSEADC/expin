@@ -202,6 +202,17 @@ document.addEventListener('DOMContentLoaded', () => {
   tick(); 
 });
 
+const burger = document.querySelector('.siteMenu__burger');
+const mobileMenu = document.querySelector('.mobileMenu');
+const closeMenu = document.querySelector('.mobileMenu__close');
+
+burger?.addEventListener('click', () => {
+  mobileMenu.classList.add('is-open');
+});
+
+closeMenu?.addEventListener('click', () => {
+  mobileMenu.classList.remove('is-open');
+});
 
 
 
