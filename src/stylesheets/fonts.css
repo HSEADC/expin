@@ -6,7 +6,13 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: 'HandilPro';
+  src: url('../fonts/HandilPro-Medium.woff') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Idealist';
   src: url('../fonts/IdealistSans-Light.woff') format('truetype');

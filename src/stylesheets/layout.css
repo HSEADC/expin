@@ -1,7 +1,7 @@
 :root {
   --bg: #F3F3F0;
   --fg: #151313;
-  --gutter: clamp(24px, 4vw, 50px); /* ← универсальный "резиновый" отступ */
+  --gutter: clamp(24px, 4vw, 50px); 
   --h1: clamp(26px, 5.8vw, 72px);
   --tagline: clamp(14px, 1.3vw, 18px);
   --ui: clamp(13px, 1.1vw, 16px);
@@ -39,6 +39,7 @@ main { flex: 1; }
 /* ===== HEADER ===== */
 .header {
   padding-block: clamp(10px, 1.8vw, 18px);
+  padding-inline: 10px; 
 }
 
 .header__inner {
@@ -48,11 +49,15 @@ main { flex: 1; }
   gap: clamp(6px, 1.6vw, 16px);
 }
 
-.logo {
+
+.logo1 {
   font-family: 'HandilPro', 'Idealist', sans-serif;
-  font-weight: 700;
-  font-size: clamp(16px, 1.3vw, 20px);
+  font-weight: 400; 
+  font-size: clamp(21px, 1vw, 21px); 
+  letter-spacing: 0.03em;
+  justify-self: start; 
 }
+
 
 .more {
   justify-self: center;
@@ -63,14 +68,16 @@ main { flex: 1; }
   text-decoration: none;
 }
 
+
 .social {
   justify-self: end;
   display: flex;
   gap: clamp(6px, 1vw, 12px);
 }
 
+
 .icon {
-  width: clamp(20px, 1.8vw, 24px);
+  width: clamp(18px, 1.6vw, 22px);
   aspect-ratio: 1 / 1;
   display: inline-flex;
   align-items: center;
@@ -84,7 +91,7 @@ main { flex: 1; }
   display: block;
 }
 
-/* ===== HERO ===== */
+
 .hero {
   padding-block: var(--section-y);
 }
@@ -227,7 +234,7 @@ main { flex: 1; }
 
 .bottom-strip__inner {
   display: flex;
-  align-items: flex-end; /* всё выровнено по нижней линии */
+  align-items: flex-end; 
   justify-content: center;
   gap: clamp(40px, 3vw, 80px);
   width: 100%;
@@ -245,7 +252,7 @@ main { flex: 1; }
   color: var(--fg);
   white-space: nowrap;
   font-size: clamp(64px, 15.5vw, 220px);
-  transform: translateY(6px); /* подгоняем по нижней линии */
+  transform: translateY(6px);
 }
 
 .big-left, .big-right {
@@ -263,12 +270,12 @@ main { flex: 1; }
 .thumb {
   position: relative;
   flex: 1 1 0;
-  aspect-ratio: 4 / 3; /* одинаковые пропорции для обеих */
+  aspect-ratio: 4 / 3; 
   overflow: hidden;
   background: #E9E9E4;
   box-shadow: 0 .5rem 1.2rem #00000010;
   border-radius: 4px;
-  transform: translateY(-37px); /* чтобы ровно с буквами */
+  transform: translateY(-37px); 
 }
 
 /* Слайды */
