@@ -1,0 +1,509 @@
+:root{
+    --topBarH: 100px;     /* высота верхней полосы */
+    --bottomMenuH: 110px; /* высота нижнего меню */
+    --ctaH: 90px;         /* примерная высота кнопки */
+  }
+.quizPage{
+    min-height: 100vh;
+    background: #F3F3F0;
+    padding-top: 96px;          /* чтобы fixed menu не перекрывал */
+    padding-bottom: 120px;      /* место под нижнюю кнопку */
+  }
+  
+  /* ===== ОБЁРТКА ТЕСТА (для blur) ===== */
+  .quizWrap{
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 96px);
+    transition: filter .35s ease, transform .35s ease;
+  }
+  .quizWrap.is-blurred{
+    filter: blur(10px);
+    transform: scale(1.01);
+  }
+  
+  
+ /* ===== INTRO OVERLAY ===== */
+  .qIntro{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.28);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .35s ease, visibility .35s ease;
+  }
+  .qIntro.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .qIntro__panel{
+    width: min(980px, 92vw);
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(18px, 2.6vw, 34px);
+    align-items: center;
+  }
+  
+.qIntro__collage{
+  width: 220%;
+  max-width: none;
+  transform: translateX(-35%);
+  display: block;
+}
+  
+  .qIntro__text{
+    color: #151313;
+    text-align: center;
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+  
+  .qIntro__text h2{
+    margin: 0 0 14px;
+    font-size: clamp(18px, 2.2vw, 26px);
+    line-height: 1.1;
+  }
+  
+  .qIntro__text p{
+    margin: 0 0 12px;
+    font-size: clamp(14px, 1.7vw, 18px);
+    line-height: 1.25;
+  }
+  
+  .qIntro__btn{
+    margin: 18px auto 0;
+    width: min(420px, 86%);
+    background: #FFFF5D;
+    border: 1px solid #FFFF5D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px 18px;
+    cursor: pointer;
+    color: #151313;
+  
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-size: 16px;
+  }
+  
+  .qIntro__btn img{
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+  }
+  
+  /* mobile */
+  @media (max-width: 860px){
+    .qIntro__panel{ grid-template-columns: 1fr; }
+    .qIntro__collage{
+      width: min(360px, 80vw);
+      margin: 0 auto;
+    }
+  }
+
+  
+  /* фон страницы теста */
+  .quizTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--topBarH);
+    background: #FFFF5D;
+    
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quizTop__inner{
+    text-align: center;
+  }
+  
+  .quizTop__small{
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  
+  .quizTop__title{
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0;
+    line-height: 1;
+  }
+  
+  /* ===== BODY ===== */
+  .quizBody{
+    padding-top: calc(var(--topBarH) + 70px);
+    padding-bottom: calc(var(--bottomMenuH) + var(--ctaH) + 80px);
+    padding-left: 6vw;
+  padding-right: 6vw;
+  }
+  
+  
+  .quizCard{
+    width: min(980px, 92vw);
+    flex: 0 0 44%;
+  max-width: 620px;
+  }
+  
+  /* вопрос */
+  .qTitle{
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 800;
+    margin: 0 0 clamp(18px, 2.4vw, 26px);
+    font-size: clamp(18px, 2.4vw, 28px);
+    line-height: 1.25;
+  }
+  
+  /* ответы крупнее */
+  .qOptions{
+    display: grid;
+    gap: clamp(16px, 2.2vw, 26px);
+  }
+  
+  .qOpt{
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    align-items: start;
+    gap: 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .qOpt input{
+    position: absolute;
+    opacity: 0;
+    
+  }
+  
+  .qOpt__dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.55);
+    margin-top: 6px;
+    position: relative;
+  }
+  
+  .qOpt input:checked + .qOpt__dot{
+    background: #FFFF5D;
+    
+  }
+  
+  .qOpt__text{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(18px, 2.2vw, 26px); /* <-- крупнее */
+    line-height: 1.25;
+  }
+  
+  /* ===== CTA: выше нижнего меню ===== */
+  /* ВАЖНО: подгони 110px под высоту твоего нижнего меню */
+  :root{ --bottomMenuH: 110px; }
+  .quizCta{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(var(--bottomMenuH) + 20px);
+  
+    width: min(1100px, 92vw);
+    height: var(--ctaH);
+  
+    display: block;              /* ← важно */
+    text-decoration: none;
+    cursor: pointer;
+  
+    border: 1px solid #FFFF5D;
+    background: #FFFF5D;
+  
+    z-index: 10000;              /* выше меню */
+    pointer-events: auto;        /* явно включаем клики */
+  }
+  
+  /* чтобы disabled выглядел как disabled */
+  .quizCta:disabled{
+    opacity: .45;
+    cursor: not-allowed;
+  }
+  
+  /* чтобы контент не прятался под кнопкой+меню */
+  .quizBody{
+    padding-bottom: calc(var(--bottomMenuH) + 140px);
+  }
+  
+  .quizCta__inner{
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 0 clamp(26px, 4vw, 46px);
+  
+    font-size: 18px;
+    font-weight: 900;
+  
+    pointer-events: none;  /* ← весь клик идет родителю */
+  }
+
+  
+
+  /* ===== RESULT (full screen) ===== */
+.quizResult{
+    position: fixed;
+    inset: 0;
+    background: #F3F3F0;
+    z-index: 200;
+    display: none;
+  }
+  
+  .quizResult.is-show{
+    display: block;
+  }
+  
+  .quizResult__inner{
+    height: 100%;
+    width: min(1280px, 94vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(18px, 3vw, 46px);
+    align-items: center;
+    padding: clamp(18px, 3vw, 44px) 0;
+  }
+  
+  .quizResult__media{
+    display: grid;
+    place-items: center;
+  }
+  
+  .quizResult__img{
+    width: min(720px, 46vw);
+    max-height: 86vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .quizResult__content{
+    padding-right: clamp(0px, 2vw, 18px);
+  }
+  
+  .quizResult__kicker{
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: clamp(12px, 1.2vw, 14px);
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+  
+  .quizResult__title{
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: clamp(22px, 3vw, 44px);
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+  
+  .quizResult__lead{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(16px, 1.6vw, 22px);
+    line-height: 1.35;
+    margin: 0 0 18px;
+  }
+  
+  .quizResult__text p{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.55;
+    margin: 0 0 10px;
+  }
+  
+  .quizResult__tips{
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+  }
+  
+  .quizResult__tips .tip{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(14px, 1.35vw, 17px);
+    line-height: 1.45;
+    padding-left: 14px;
+    position: relative;
+  }
+  
+  .quizResult__tips .tip::before{
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .quizResult__actions{
+    margin-top: clamp(18px, 3vw, 34px);
+    display: grid;
+    gap: 12px;
+    width: min(520px, 100%);
+  }
+  
+  .quizResult__btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px 22px;
+    text-decoration: none;
+    cursor: pointer;
+  
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  
+    border: 1px solid rgba(0,0,0,0.35);
+    background: transparent;
+    color: #151313;
+  }
+  
+  .quizResult__btn--primary{
+    background: #FFFF5D;
+    border-color: #FFFF5D;
+  }
+  
+  .quizResult__btn span{
+    opacity: 0.75;
+  }
+  
+  /* mobile */
+  @media (max-width: 980px){
+    .quizResult__inner{
+      grid-template-columns: 1fr;
+      align-content: start;
+      padding: 18px 0 26px;
+    }
+    .quizResult__img{
+      width: min(680px, 88vw);
+      max-height: 42vh;
+    }
+  }
+  
+
+
+
+  /* ===== SCALE (1–10) ===== */
+.qScale{
+    margin-top: clamp(28px, 4vw, 52px);
+  }
+  
+  /* Подписи слева/справа */
+  .qScale__labels{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(14px, 1.6vw, 18px);
+    color: rgba(0,0,0,0.85);
+  }
+  
+  /* Контейнер range + деления */
+  .qScale__track{
+    position: relative;
+    width: min(1100px, 92vw);
+    height: 54px; /* зона для делений */
+    margin: 0 auto;
+  }
+  
+  .qScale__range{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      #D9D9D9 0%,
+      #FFFF5D 100%
+    );
+    outline: none;
+    border: 0;
+  }
+  
+  
+  /* Треки для браузеров */
+  .qScale__range::-webkit-slider-runnable-track{
+    height: 12px;
+    border-radius: 999px;
+    background: transparent;
+  }
+  .qScale__range::-moz-range-track{
+    height: 12px;
+    border-radius: 999px;
+    background: transparent;
+  }
+  
+  /* Бегунок */
+  .qScale__range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #FFFF5D;
+    border: 2px solid rgba(0,0,0,0.6);
+    margin-top: -5px; /* центруем по линии */
+    cursor: pointer;
+  }
+  .qScale__range::-moz-range-thumb{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #FFFF5D;
+    border: 2px solid rgba(0,0,0,0.6);
+    cursor: pointer;
+  }
+  
+  /* Деления 1–10 (тонкие вертикальные “шпильки”) */
+  .qScale__ticks{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -14px;          /* подняли над треком */
+    height: 14px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0;
+    align-items: end;
+  }
+  
+  .qScale__tick{
+    justify-self: center;
+    width: 10px;
+    height: 14px;
+    background: rgba(0,0,0,0.12);
+    border-radius: 2px;
+  }
+  
+  /* Можно подсвечивать деления до выбранного значения */
+  .qScale__tick.is-on{
+    background: rgba(0,0,0,0.20);
+  }
+  

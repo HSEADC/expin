@@ -1,14 +1,64 @@
-<html lang="en"></html>
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гайд 3</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EXPIN — Гайд</title>
+  <link rel="icon" type="image/png" href="../../img/favicon.png" />
+  
 </head>
 <body>
-    <h1>Гайд 3</h1>
-    <ul>
-        <li><a href="../../index.html">На главную</a></li>
-        <li><a href="../ guides.html">Все гайды</a></li>
-    </ul>
+
+  <nav class="siteMenu" aria-label="Меню разделов">
+    <div class="siteMenu__inner">
+      <a class="siteMenu__brand" href="../../index.html">EXPIN</a>
+      <div class="siteMenu__links">
+        <a href="../../index.html">Главная</a>
+        <a href="../articles.html">Статьи</a>
+        <a href="../guides.html">Гайды</a>
+        <a href="../tests.html">Тест</a>
+      </div>
+      <a class="siteMenu__tg" href="https://t.me/ex_pin" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../../img/tg.svg" alt="">
+      </a>
+    </div>
+  </nav>
+
+  <main class="guideOneScreen">
+    <section class="guideScene" id="guideScene">
+      <div class="guideScene__inner">
+
+        <img
+          class="guideScene__objects"
+          src="../../img/guide/Frame 2131329301.png"
+          alt=""
+          aria-hidden="true"
+        >
+
+        <div class="guideScene__text" id="guideText">
+          <p class="guideScene__lead">
+            Небольшой гайд о том, как снизить шум вокруг 
+            и вернуть ясность мышления и восприятия.
+          </p>
+
+          <h1 class="guideScene__title">
+            <span class="titleLine">ПРОВОДИ ДНИ</span>
+            <span class="titleLine">БЕЗ СИМУЛЯЦИЙ</span>
+          </h1>
+        </div>
+
+        <div class="guideScene__gallery" id="guideGallery">
+          <article class="guideCard guideCard--1"><img src="../../img/guide/Frame 2131329282.png" alt=""></article>
+          <article class="guideCard guideCard--2"><img src="../../img/guide/Frame 2131329283.png" alt=""></article>
+          <article class="guideCard guideCard--3"><img src="../../img/guide/Frame 2131329284.png" alt=""></article>
+          <article class="guideCard guideCard--4"><img src="../../img/guide/Frame 2131329285.png" alt=""></article>
+          <article class="guideCard guideCard--5"><img src="../../img/guide/Frame 2131329286.png" alt=""></article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="../../javascripts/guide.js"></script>
 </body>
 </html>

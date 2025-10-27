@@ -1,55 +1,355 @@
-/* ===== Страница гайдов ===== */
+.articlesPage{
+  min-height: 100vh;
+  background: #F3F3F0;
+}
 
-.guides-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.articlesHero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #F3F3F0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  cursor: none;
+}
+
+.articlesHero__title{
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(60px, 10vw, 170px);
+  line-height: 0.95;
+  color: #151313;
+  pointer-events: none;
+}
+
+.articlesHero__cursorLayer{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.articlesHero__trailItem{
+  position: absolute;
+  width: clamp(120px, 14vw, 220px);
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.12));
+  transition: opacity 0.45s ease;
+}
+
+.articlesHero__trailItem.is-fade{
+  opacity: 0;
+}
+
+.articlesHero__preload{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.guidesStackWrap{
+  position: relative;
+  width: 100%;
+  height: 820px;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.guidesStack{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: ew-resize;
+  touch-action: pan-x;
+}
+
+.guidesShowcase{
+  width: 100%;
+  min-height: 100vh;
+  background: #F3F3F0;
+  overflow: hidden;
+  padding: 42px 18px 28px;
+  box-sizing: border-box;
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.guidesShowcase__inner{
+  width: min(1600px, 98vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+  min-height: 0;
+}
+
+.guidesShowcase__left{
+  padding-top: 15px;
+}
+
+.guidesShowcase__brand{
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: clamp(34px, 3vw, 72px);
+  line-height: 0.9;
+  margin-bottom: 110px;
+  color: #151313;
+}
+
+.guidesShowcase__title{
+  margin: 0 0 16px;
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 2.4vw, 56px);
+  line-height: 0.95;
+  color: #151313;
+}
+
+.guidesShowcase__desc{
+  display: grid;
+  gap: 10px;
+  font-family: 'Handil Pro', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(16px, 1.4vw, 30px);
+  line-height: 0.95;
+  color: rgba(21,19,19,0.45);
+  text-transform: uppercase;
+}
+
+
+
+
+.guideSlide{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: min(980px, 70vw);
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.65s ease,
+    opacity 0.65s ease,
+    filter 0.65s ease;
+  transform-origin: center center;
+  text-decoration: none;
+}
+
+.guideSlide img{
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+.guideSlide.is-active{
+  z-index: 4;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(110px) scale(1);
+}
+
+.guideSlide.is-prev-1{
+  z-index: 3;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(10px) scale(0.86);
+}
+
+.guideSlide.is-prev-2{
+  z-index: 2;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(-90px) scale(0.72);
+}
+
+.guideSlide.is-prev-3{
+  z-index: 1;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(-185px) scale(0.58);
+}
+
+@media (max-width: 1100px){
+  .guidesShowcase__inner{
+    grid-template-columns: 1fr;
   }
-  
-  /* Главный заголовок */
-  .guides-title {
-    font-family: 'HandilPro', sans-serif;
-    font-size: clamp(32px, 4vw, 48px);
-    margin-bottom: 12px;
-    text-align: center;
+
+  .guidesShowcase__left{
+    padding-top: 0;
   }
-  
-  /* Подзаголовок */
-  .guides-subtitle {
-    font-family: 'Newton', serif;
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 600;
+
+  .guidesShowcase__brand{
     margin-bottom: 32px;
+  }
+
+  .guidesStack{
+    height: 640px;
+  }
+
+  .guideSlide{
+    width: min(880px, 88vw);
+  }
+}
+
+@media (max-width: 760px){
+  .guidesStack{
+    height: 500px;
+  }
+
+  .guideSlide.is-active{
+    transform: translate(-50%, -50%) translateY(60px) scale(1);
+  }
+
+  .guideSlide.is-prev-1{
+    transform: translate(-50%, -50%) translateY(-10px) scale(0.88);
+  }
+
+  .guideSlide.is-prev-2{
+    transform: translate(-50%, -50%) translateY(-80px) scale(0.76);
+  }
+
+  .guideSlide.is-prev-3{
+    transform: translate(-50%, -50%) translateY(-140px) scale(0.64);
+  }
+}
+
+
+
+
+
+
+
+/* ===== FOOTER FULLSCREEN ===== */
+
+.siteFooter{
+  min-height: 100vh;
+  background: #F3F3F0;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 4vw, 44px) 0;
+}
+
+.siteFooter__inner{
+  width: min(1200px, 92vw);
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  gap: clamp(18px, 3vw, 34px);
+}
+
+.siteFooter__nav{
+  display: flex;
+  gap: clamp(12px, 2vw, 28px);
+  align-items: center;
+  justify-content: space-around; 
+}
+
+.siteFooter__nav a{
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.siteFooter__tg img{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+
+.siteFooter__brand{
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.siteFooter__logo{
+  width: min(900px, 88vw);
+  height: auto;
+  display: block;
+}
+
+.siteFooter__shark{
+  position: absolute;
+  left: 62%;
+  top: 40%;
+
+  width: clamp(65px, 8vw, 130px);
+  height: auto;
+
+  transform-origin: 50% 80%;
+  animation: footerSharkJump 1.15s ease-in-out infinite;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+  pointer-events: none;
+}
+
+
+@keyframes footerSharkJump{
+  0%   { transform: translateY(0) rotate(-6deg); }
+  40%  { transform: translateY(-14px) rotate(5deg); }
+  70%  { transform: translateY(2px) rotate(-2deg); }
+  100% { transform: translateY(0) rotate(-6deg); }
+}
+
+.siteFooter__bottom{
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr;
+  gap: clamp(10px, 2vw, 24px);
+  align-items: end;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(12px, 1.2vw, 16px);
+  color: #111;
+}
+
+.siteFooter__bottomLeft{ justify-self: start; }
+.siteFooter__bottomCenter{ justify-self: center; text-align: center; }
+.siteFooter__bottomRight{ justify-self: end; }
+
+
+@media (max-width: 760px){
+  .siteFooter__nav{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+  }
+
+  .siteFooter__shark{
+    left: 68%;
+    top: -24%;
+  }
+
+  .siteFooter__bottom{
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  
-  /* Список гайдов в столбик */
-  .guides-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-    max-width: 600px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+  .siteFooter__bottomLeft,
+  .siteFooter__bottomRight{
+    justify-self: center;
   }
-  
-  /* ссылки-гайды */
-  .guide-link {
-    font-family: 'Newton', serif;
-    font-size: clamp(18px, 2vw, 22px);
-    color: #111;
-    text-decoration: none;
-    font-weight: 600;
-    transition: opacity 0.2s ease;
-  }
-  
-  .guide-link:hover {
-    opacity: 0.6;
-  }
-  
+}
+
+.siteMenu.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(16px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.siteMenu{
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+

@@ -1,0 +1,554 @@
+.articleDetailPage{
+    background: #F3F3F0;
+    color: #151313;
+    overflow-x: hidden;
+  }
+  
+  /* HERO */
+  .adHero{
+    position: relative;
+    background: #F3F3F0;
+    padding-top: 36px;
+  }
+  
+  .adHero__inner{
+    position: relative;
+    width: min(1650px, 96vw);
+    min-height: 690px;
+    margin: 0 auto;
+    padding: 24px 0 0;
+  }
+  
+  .adHero__back{
+    position: absolute;
+    top: 6px;
+    right: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #151313;
+    text-decoration: none;
+    z-index: 8;
+  }
+  
+  .adHero__mainImage{
+    position:absolute;
+    left: -80px;
+   top: -50px;
+    width: 50%;
+    height: auto;
+    display: block;
+    z-index: 5;
+  }
+  .adHero__mainImage2{
+    position:absolute;
+    left: -50px;
+   top: -80px;
+    width: 55%;
+    height: auto;
+    display: block;
+    z-index: 5;
+   }
+   .adHero__mainImage3{
+    position:absolute;
+    left: -50px;
+   top: -100px;
+    width: 55%;
+    height: auto;
+    display: block;
+    z-index: 5;
+   }
+   .adHero__mainImage4{
+    position:absolute;
+    left: -10px;
+   top: -30px;
+    width: 44%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+   .adHero__mainImage6{
+    position:absolute;
+    left: -10px;
+   top: -30px;
+    width: 39%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+
+   .adHero__mainImage15{
+    position:absolute;
+    left: -10px;
+   top: -30px;
+    width: 45%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+
+   .adHero__mainImage20{
+    position:absolute;
+    left: -10px;
+   top: -100px;
+    width: 40%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+
+   .adHero__mainImage24{
+    position:absolute;
+    left: -10px;
+   top: 10px;
+    width: 53%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+
+   .adHero__mainImage25{
+    position:absolute;
+    left: -10px;
+   top: -100px;
+    width: 45%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+
+   .adHero__mainImage26{
+    position:absolute;
+    left: -10px;
+   top: -100px;
+    width: 44%;
+    height: auto;
+    display: block;
+    z-index: 5;
+
+   }
+  .adHero__titleWrap{
+    position: absolute;
+    right: clamp(20px, 6vw, 120px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 6;
+  right: -0.2%;
+    width: min(600px, 40vw);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;   
+  }
+  .adHero__title{
+    margin: 0;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+  
+    font-size: clamp(36px, 3.8vw, 68px); /* было слишком большое */
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  
+  .adHero__title span{
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .adHero__subtitle{
+    margin-top: clamp(6px, 1vw, 14px);
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(18px, 1.8vw, 34px);
+    line-height: 0.95;
+  }
+  
+  .adHero__decor{
+    position: absolute;
+    z-index: 7;
+    height: auto;
+    pointer-events: none;
+  }
+  
+  .adHero__decor--1{
+    top: 22px;
+    right: 320px;
+    width: 64px;
+  }
+  
+  .adHero__decor--2{
+    top: 330px;
+    left: 700px;
+    width: 54px;
+  }
+  
+  .adHero__decor--3{
+    top: 500px;
+    right: 80px;
+    width: 78px;
+  }
+  
+  .adHero__decor--4{
+    top: 36px;
+    right: 48px;
+    width: 66px;
+  }
+  
+  /* TICKER */
+  .adTicker{
+    position: relative;
+    z-index: 1;
+    margin-top: -48px;
+    background: #F1F25B;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+  
+  .adTicker__track{
+    display: flex;
+    gap: 48px;
+    width: max-content;
+    padding: 10px 0;
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: clamp(18px, 2vw, 28px);
+    text-transform: uppercase;
+    animation: adTickerMove 22s linear infinite;
+  }
+  
+  .adTicker__track span{
+    white-space: nowrap;
+  }
+  
+  @keyframes adTickerMove{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+  
+  /* CONTENT */
+  .adContent{
+    background: #F3F3F0;
+    padding: 200px 0 200px;
+  }
+  
+  .adContent__inner{
+    width: min(1600px, 96vw);
+    margin: 0 auto;
+  }
+  
+  .adTextGrid{
+    display: grid;
+    grid-template-columns: minmax(420px, 1fr) minmax(520px, 1fr);
+    column-gap: 72px;
+    row-gap: 0;
+    align-items: start;
+  }
+  
+  .adTextRow{
+    display: contents;
+  }
+  
+  .adTextRow__left,
+  .adTextRow__right{
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .adTextRow__left{
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(22px, 1.9vw, 38px);
+    line-height: 0.95;
+    color: #151313;
+    line-height: 1;
+  }
+  
+  .adTextRow__right{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(18px, 1.15vw, 24px);
+    line-height: 1.16;
+    color: #151313;
+  }
+  
+  .adTextRow + .adTextRow .adTextRow__left,
+  .adTextRow + .adTextRow .adTextRow__right{
+    margin-top: 46px;
+  }
+  
+  /* QUIZ */
+  .adQuiz{
+    background: #F3F3F0;
+    padding: 28px 0 44px;
+  }
+  
+  .adQuiz__inner{
+    width: min(1600px, 96vw);
+    margin: 0 auto;
+    background: #F1F25B;
+    padding: 26px 28px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .adQuiz__title{
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(26px, 2vw, 42px);
+    line-height: 1.6;
+    color: #151313;
+  }
+  
+  .adQuiz__btn{
+    justify-self: end;
+    width: 240px;
+    min-height: 70px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #151313;
+    background: #EFEFEF;
+    border: 1px solid rgba(0,0,0,0.08);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  
+  /* RECOMMENDED */
+  .adRecommended{
+    background: #F1F25B;
+    padding: 52px 0 44px;
+  }
+  
+  .adRecommended__inner{
+    width: min(1600px, 96vw);
+    margin: 0 auto;
+  }
+  
+  .adRecommended__title{
+    margin: 0 0 34px;
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(28px, 2.2vw, 46px);
+    line-height: 0.95;
+    color: #151313;
+  }
+  
+  .adRecommended__grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+  
+  .adRecCard{
+    background: #EFEFEF;
+    color: #151313;
+    text-decoration: none;
+  }
+  
+  .adRecCard__img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .adRecCard__body{
+    padding: 10px 10px 12px;
+  }
+  
+  .adRecCard__title{
+    margin: 0 0 12px;
+    font-family: 'Handil Pro', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: clamp(14px, 1vw, 20px);
+    line-height: 1.04;
+    color: #151313;
+  }
+  
+  .adRecCard__link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 30px;
+    padding: 4px 10px;
+    border: 1px solid rgba(0,0,0,0.10);
+    background: rgba(255,255,255,0.5);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #151313;
+  }
+  
+  /* FOOTER MINI */
+  .adFooterMini{
+    background: #F1F25B;
+    padding: 0 0 34px;
+  }
+  
+  .adFooterMini__nav{
+    width: min(980px, 92vw);
+    margin: 0 auto;
+    min-height: 64px;
+    background: #F3F3F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 18px;
+  }
+  
+  .adFooterMini__nav a{
+    text-decoration: none;
+    color: #151313;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+  }
+  
+  .adFooterMini__brand{
+    font-family: 'Handil Pro', system-ui, sans-serif !important;
+    font-weight: 900;
+    font-size: 30px !important;
+  }
+  
+  .adFooterMini__tg img{
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+  
+
+  @media (min-width: 1400px){
+    .adHero__titleWrap{
+      width: 820px;
+    }
+  
+    .adHero__title{
+      font-size: 122px;
+    }
+  
+    .adHero__subtitle{
+      font-size: 46px;
+    }
+  }
+  
+
+  @media (max-width: 1100px){
+    .adHero__inner{
+      min-height: 560px;
+    }
+  
+    .adHero__mainImage{
+      width: 420px;
+    }
+  
+    .adHero__titleWrap{
+      width: min(720px, 62vw);
+    }
+  
+    .adTextGrid{
+      grid-template-columns: 1fr 1fr;
+      column-gap: 42px;
+    }
+  
+    .adQuiz__inner{
+      grid-template-columns: 1fr;
+    }
+  
+    .adQuiz__btn{
+      justify-self: start;
+    }
+  }
+  
+  /* MOBILE */
+  @media (max-width: 820px){
+    .adHero__inner{
+      min-height: 560px;
+      padding-top: 40px;
+    }
+  
+    .adHero__mainImage{
+      position: relative;
+      left: 0;
+      top: 0;
+      width: min(420px, 68vw);
+      margin: 0 auto 14px;
+      display: block;
+    }
+  
+    .adHero__titleWrap{
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      width: 100%;
+      margin-left: 0;
+      padding-top: 0;
+    }
+  
+    .adHero__title{
+      font-size: clamp(48px, 12vw, 78px);
+    }
+  
+    .adHero__subtitle{
+      font-size: clamp(22px, 6vw, 34px);
+    }
+  
+    .adHero__decor--1,
+    .adHero__decor--2,
+    .adHero__decor--3,
+    .adHero__decor--4{
+      display: none;
+    }
+  
+    .adTicker{
+      margin-top: 0;
+    }
+  
+    .adContent{
+      padding: 48px 0 30px;
+    }
+  
+    .adTextGrid{
+      grid-template-columns: 1fr;
+      row-gap: 0;
+    }
+  
+    .adTextRow{
+      display: block;
+    }
+  
+    .adTextRow__left{
+      margin-bottom: 12px;
+    }
+  
+    .adTextRow + .adTextRow .adTextRow__left,
+    .adTextRow + .adTextRow .adTextRow__right{
+      margin-top: 28px;
+    }
+  
+    .adRecommended__grid{
+      grid-template-columns: 1fr;
+    }
+  
+    .adFooterMini__nav{
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 12px 18px;
+    }
+  }

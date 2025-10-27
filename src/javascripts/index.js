@@ -1,4 +1,9 @@
 import '../stylesheets/style.css';
+import '../javascripts/test1';
+import '../javascripts/articles';
+import '../javascripts/guide';
+import '../javascripts/articles_all';
+
 
 /* ===== utils ===== */
 const clamp01 = (v) => Math.min(1, Math.max(0, v));
@@ -196,3 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', onScroll, { passive: true });
   tick(); 
 });
+
+
+
+
+
+

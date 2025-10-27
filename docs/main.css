@@ -42,40 +42,35 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-@font-face {
-  font-family: 'HandilPro';
-  src: url(33f38dd4a24b690f3cec.woff) format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+@font-face{
+    font-family: 'PT Root UI';
+    src: url(f82344daaacb5424b169.woff),
+        url(f31c5219b0912845f393.woff2);
+    font-weight: 700;
 }
-
-@font-face {
-  font-family: 'HandilPro';
-  src: url(33f38dd4a24b690f3cec.woff) format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+@font-face{
+    font-family: 'PT Root UI';
+    src: url(e24244df074291681cd3.woff),
+        url(6f2ccf4ac327e1d6507e.woff2);
+    font-weight: 500;
 }
-
-
-@font-face {
-  font-family: 'Newton';
-  src: url(b5cb1ecefd106aae4179.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+@font-face{
+    font-family: 'PT Root UI';
+    src: url(ea7178e3e5d27a1d3248.woff),
+        url(b43dba986b9cde356afd.woff2);
+    font-weight: 400;
 }
-
+@font-face{
+    font-family: 'PT Root UI';
+    src: url(8bf08d3a5b04f523d0d4.woff),
+        url(f0497492db8214d4938e.woff2);
+    font-weight: 300;
+}
 body {
-  font-family: 'Newton', system-ui, -apple-system, sans-serif;
-  font-weight: 400;
+    font-family: 'PT Root UI', Arial, Helvetica, sans-serif;
 }
-
-h1, h2, h3, .headline, .big {
-  font-family: 'HandilPro', 'Newton', sans-serif;
-  font-weight: 700;
+h1{
+    font-weight: 700;
 }
 
 

@@ -77,48 +77,17 @@
         </section>
       </section>
 
-      <!-- ===== PANEL 2: S2 (накрывает hero) ===== -->
-      <section class="panel panel--s2" id="panel2">
-        <section class="s2" id="scene2">
-          <div class="s2__stage">
-
-            <div class="s2__row">
-              <img class="piece w w-my"     src="./img/Мы.png" alt="" />
-              <img class="piece o o-bucket" src="./img/img_webp/41c68b2e88ef40af3345ba0cd8c10171-Photoroom (1) 1.webp" alt="" aria-hidden="true" />
-              <img class="piece w w-help"   src="./img/помогаем.png" alt="" />
-              <img class="piece w w-notice" src="./img/змечать.png" alt="" />
-              <img class="piece o o-pom"    src="./img/img_webp/6ff3ee1d1eaacf38e85fe7587af4e8ea-Photoroom 1.webp" alt="" aria-hidden="true" />
-              <img class="piece w w-beauty" src="./img/красоту,.png" alt="" />
-            </div>
-
-            <div class="s2__row">
-              <img class="piece w w-find"    src="./img/находить.png" alt="" />
-              <img class="piece o o-key"     src="./img/ccb2ef294c91f0ce8aefc065c9f6ff12-Photoroom 2.png" alt="" aria-hidden="true" />
-              <img class="piece w w-meaning" src="./img/смысл.png" alt="" />
-              <img class="piece w w-in"      src="./img/в.png" alt="" />
-              <img class="piece w w-details" src="./img/мелочах,.png" alt="" />
-              <img class="piece o o-gloves"  src="./img/img_webp/974126510d00c679bdd327a2af51e976-Photoroom 2.webp" alt="" aria-hidden="true" />
-            </div>
-
-            <div class="s2__row">
-              <img class="piece w w-feel"   src="./img/чувствовать.png" alt="" />
-              <img class="piece w w-and"    src="./img/и.png" alt="" />
-              <img class="piece w w-see"    src="./img/видеть.png" alt="" />
-              <img class="piece o o-chair"  src="./img/img_webp/65f0bee7629bcce3a7002e0c3eb46996-Photoroom 1.webp" alt="" aria-hidden="true" />
-              <img class="piece w w-new"    src="./img/новое.png" alt="" />
-            </div>
-
-            <div class="s2__row">
-              <img class="piece w w-in2"     src="./img/в.png" alt="" />
-              <img class="piece o o-bag"     src="./img/img_webp/a5572aaac3261577f60cca2ada4c9ecf-Photoroom.webp" alt="" aria-hidden="true" />
-              <img class="piece w w-usual"   src="./img/привычном,.png" alt="" />
-              <img class="piece o o-candy"   src="./img/img_webp/c2991e01dcc3d0030c59fb65efc40d52-Photoroom 2.webp" alt="" aria-hidden="true" />
-              <img class="piece w w-inspire" src="./img/вдохновляться.png" alt="" />
-            </div>
-
-          </div>
-        </section>
-      </section>
+<!-- ===== PANEL 2: S2 (накрывает hero) ===== -->
+<section class="panel panel--s2" id="panel2">
+  <section class="s2" id="scene2">
+    <div class="s2__stage">
+      <!-- Один div с резиновой картинкой по центру -->
+      <div class="s2__single-image">
+        <img src="./img/O_ArticleMainPage.png" alt="Description" />
+      </div>
+    </div>
+  </section>
+</section>
 <!-- ===== PANEL 3: ZO + (zoom stack) + OM ===== -->
 <section class="panel panel--zo" id="panel3">
   <section class="zoScene" id="scene3">
@@ -153,6 +122,7 @@
 <!-- ===== PANEL 5: PLAN (текст + шарик справа) ===== -->
 <section class="panel panel--plan" id="panel5">
   <section class="planScene" id="scene5">
+    
     <div class="planScene__inner">
       <div class="planScene__text">
         <h2 class="planScene__title">
@@ -161,9 +131,17 @@
         </h2>
 
         <div class="planScene__list">
-          <div>СТАТЬИ ДЛЯ СТРАТЕГИИ</div>
-          <div>ГАЙДЫ ДЛЯ ТАКТИКИ</div>
-          <div>ТЕСТЫ ДЛЯ САМОДИАГНОСТИКИ</div>
+          <a href="./pages/articles.html" class="planScene__item">
+            СТАТЬИ ДЛЯ СТРАТЕГИИ
+          </a>
+          
+          <a href="./pages/guides.html" class="planScene__item">
+            ГАЙДЫ ДЛЯ ТАКТИКИ
+          </a>
+          
+          <a href="./pages/tests.html" class="planScene__item">
+            ТЕСТЫ ДЛЯ САМОДИАГНОСТИКИ
+          </a>
         </div>
       </div>
 

@@ -1,45 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тесты</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EXPIN — ТЕСТ</title>
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+
 </head>
 
 <body>
+  <main class="testsPage">
 
+    <!-- ===== FIXED MENU (как на всём сайте) ===== -->
+    <nav class="siteMenu" aria-label="Меню разделов">
+      <div class="siteMenu__inner">
+        <a class="siteMenu__brand" href="../index.html">EXPIN</a>
 
-<header class="header">
-  <div class="container header__inner">
+        <div class="siteMenu__links">
+          <a href="../index.html">Главная</a>
+          <a href="./articles.html">Статьи</a>
+          <a href="./guides.html">Гайды</a>
+          <a class="is-active" href="./tests.html">Тест</a>
+        </div>
 
-    <a href="./mainpage.html" class="logo1">EXPIN</a>
-
-    <nav class="main-nav">
-      <a href="./mainpage.html" class="nav-link">Главная</a>
-      <a href="./articles.html" class="nav-link">Статьи</a>
-      <a href="./guides.html" class="nav-link">Гайды</a>
-      <a href="./tests.html" class="nav-link">Тесты</a>
+        <a class="siteMenu__tg"
+           href="https://t.me/ex_pin"
+           target="_blank"
+           rel="noopener"
+           aria-label="Telegram">
+          <img src="../img/tg.svg" alt="">
+        </a>
+      </div>
     </nav>
 
-    <nav class="social">
-      <a class="icon" href="https://t.me/ex_pin" target="_blank">
-        <img src="../img/tg.svg" alt="Telegram">
+    <!-- ===== STACK ===== -->
+    <div class="testsStack" id="testsStack">
+        <section class="articlesHero articlesPanel articlesPanel--hero" id="articlesHero">
+        <h1 class="articlesHero__title">ТЕСТ</h1>
+      
+        <div class="articlesHero__cursorLayer" id="cursorLayer"></div>
+      
+        <div class="articlesHero__preload" aria-hidden="true">
+          <img src="../img/cursor3/cursor1.png" alt="">
+          <img src="../img/cursor3/cursor2.png" alt="">
+          <img src="../img/cursor3/cursor3.png" alt="">
+          <img src="../img/cursor3/cursor4.png" alt="">
+          <img src="../img/cursor3/cursor5.png" alt="">
+          <img src="../img/cursor3/cursor6.png" alt="">
+          <img src="../img/cursor3/cursor7.png" alt="">
+          <img src="../img/cursor3/cursor8.png" alt="">
+          <img src="../img/cursor3/cursor9.jpg" alt="">
+          <img src="../img/cursor3/cursor10.png" alt="">
+          <img src="../img/cursor3/cursor11.png" alt="">
+          <img src="../img/cursor3/cursor12.png" alt="">
+          <img src="../img/cursor3/cursor13.png" alt="">
+          <img src="../img/cursor3/cursor14.png" alt="">
+          <img src="../img/cursor3/cursor15.png" alt="">
+          <img src="../img/cursor3/cursor16.png" alt="">
+          <img src="../img/cursor3/cursor17.png" alt="">
+          <img src="../img/cursor3/cursor18.png" alt="">
+          <img src="../img/cursor3/cursor19.png" alt="">
+          <img src="../img/cursor3/cursor20.png" alt="">
+        </div>
+      </section>
+
+<!-- ===== PANEL 2: GREY (всплывает по скроллу) ===== -->
+<section class="tPanel tPanel--desc" id="tPanel2">
+  <section class="tDesc">
+ 
+    <img class="tDesc__bg" src="../img/img_webp/Group 2087329320.webp" alt="" aria-hidden="true">
+
+    <div class="tDesc__content">
+      <p class="tDesc__text">
+        ТЕСТ ПОКАЖЕТ, КАК ИМЕННО ТЫ СМОТРИШЬ:<br>
+        ЧТО ЦЕПЛЯЕШЬ ПЕРВЫМ, ЧТО ПРОПУСКАЕШЬ<br>
+        И ГДЕ У ТЕБЯ РАСТЁТ НАСМОТРЕННОСТЬ.
+      </p>
+
+      <a class="tCta" href="../pages/tests/test1.html">
+        <span class="tCta__left">НАЧАТЬ ТЕСТ</span>
+        <span class="tCta__right">OK</span>
       </a>
-    </nav>
+    </div>
+  </section>
+</section>
 
-  </div>
-</header>
+    </div>
+  </main>
 
-<main class="tests-page">
-
-    <h1 class="tests-title">Тесты</h1>
-
-    <ul class="tests-list">
-        <li><a class="test-link" href="./tests/test1.html"> Узнай свой тип вдохновения</a></li>
-
-    </ul>
-
-</main>
-
+  <script src="../javascripts/index.js"></script>
 </body>
 </html>
