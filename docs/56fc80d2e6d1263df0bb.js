@@ -1,0 +1,1 @@
+import"../stylesheets/style.css";!function(){const e=document.querySelectorAll(".thumb");e.forEach((e,t)=>{const s=Array.from(e.querySelectorAll(".slide"));if(s.length<=1)return;let l=0;const c=e=>{s.forEach(e=>e.classList.remove("is-active")),s[e].classList.add("is-active")};c(0),setTimeout(()=>{setInterval(()=>{l=(l+1)%s.length,c(l)},1500)},400*t)})}();

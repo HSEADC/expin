@@ -31,3 +31,31 @@
     });
   })();
   
+
+
+(function syncRightWithImage(){
+  const hero = document.querySelector('.hero-container');
+  const img = document.querySelector('.headline-img');
+  const right = document.querySelector('.right-copy');
+  if (!hero || !img || !right) return;
+
+  const applySync = () => {
+    const heroRect = hero.getBoundingClientRect();
+    const imgRect = img.getBoundingClientRect();
+    const topOffset = Math.max(0, imgRect.top - heroRect.top);
+    right.style.marginTop = `${topOffset}px`;
+    right.style.setProperty('--pair-h', `${imgRect.height}px`);
+  };
+
+  const ready = () => applySync();
+  let rAF = null;
+  const onResize = () => {
+    if (rAF) cancelAnimationFrame(rAF);
+    rAF = requestAnimationFrame(applySync);
+  };
+
+  window.addEventListener('resize', onResize, { passive: true });
+  if (img.complete) ready(); else img.addEventListener('load', ready, { once: true });
+  if ('ResizeObserver' in window) new ResizeObserver(applySync).observe(img);
+})();
+
