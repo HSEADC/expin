@@ -2,15 +2,15 @@
   --bg:#F3F3F0;
   --fg:#151313;
 
-  /* единые поля по краям; держим 50px, но можно меньше на очень узких */
+
   --gutter: clamp(24px, 4vw, 50px);
 
-  /* типографика */
+
   --h1: clamp(26px, 5.8vw, 72px);
   --tagline: clamp(14px, 1.3vw, 18px);
   --ui: clamp(13px, 1.1vw, 16px);
 
-  /* выравнивание низа букв/картинок */
+
   --big-lift: clamp(2px, .6vw, 6px);
   --thumb-lift: clamp(16px, 2.6vw, 37px);
 }
@@ -26,24 +26,24 @@ html, body{
   font-family:'Idealist',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
-/* КЛЮЧЕВОЕ: тело — флекс-колонка на всю высоту окна */
+
 body{
   display:flex;
   flex-direction:column;
   min-height:100vh;
 }
 
-/* main занимает всё доступное пространство между header и bottom-strip */
+
 main{
-  flex:1;              /* растягиваемся между верхом и низом */
-  display:flex;        /* позволим внутри центрировать hero по вертикали */
-  min-height:0;        /* избегаем переполнения при маленьких окнах */
+  flex:1;             
+  display:flex;
+  min-height:0;       
 }
-/* общий контейнер */
+
 .container{
   width:100%;
   max-width:1600px;
-  /* учитываем вырезы на iOS */
+
   padding-left: max(var(--gutter), env(safe-area-inset-left));
   padding-right:max(var(--gutter), env(safe-area-inset-right));
   margin-inline:auto;
@@ -80,12 +80,12 @@ main{
 .hero {
   padding-block: clamp(24px, 6vw, 72px);
   flex:1;
-  display:flex;                 /* чтобы можно было центрировать содержимое по вертикали */
+  display:flex;                 
   padding-block: clamp(24px, 6vw, 72px);
 
 }
 
-/* hero теперь тоже контейнер */
+
 .hero-container {
   width: 100%;
   max-width: 1600px;
@@ -95,7 +95,7 @@ main{
   margin-block:auto;
 }
 
-/* сетка — 2 колонки */
+
 .hero__inner {
   display: grid;
   grid-template-columns: minmax(0, 55%) minmax(0, 45%);
@@ -109,7 +109,7 @@ main{
   align-items: flex-start;
 }
 
-/* изображение */
+
 .headline-img {
   width: clamp(680px, 45vw, 1020px);
   height: auto;
@@ -121,20 +121,18 @@ main{
   transition: all 0.3s ease;
 }
 
-/* правая колонка (текст + форма)
-   теперь автоматически подстраивается под высоту картинки */
 .right-copy {
   justify-self: end;
   width: min(460px, 100%);
   margin-right: max(var(--gutter), env(safe-area-inset-right));
-  margin-top: 0; /* заменено — отступ управляется JS */
+  margin-top: 0; 
   min-height: var(--pair-h, auto);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* текст под заголовком */
+
 .tagline {
   margin: 0 0 clamp(14px, 2.4vw, 22px) 0;
   font-family: 'HandilPro', 'Idealist', sans-serif;
@@ -148,7 +146,7 @@ main{
   white-space: nowrap;
 }
 
-/* форма */
+
 .subscribe {
   width: 100%;
   max-width: clamp(340px, 45vw, 420px);
@@ -225,7 +223,7 @@ main{
   margin-inline:auto;
 
   display:flex;
-  align-items:flex-end;             /* общий нижний край */
+  align-items:flex-end;           
   justify-content:center;
   gap: clamp(40px, 3vw, 80px);
 }
@@ -238,7 +236,7 @@ main{
   color:var(--fg);
   white-space:nowrap;
   font-size: clamp(64px, 15.5vw, 220px);
-  transform: translateY(var(--big-lift)); /* одинаковый «подсад» */
+  transform: translateY(var(--big-lift)); 
 }
 .big-left,.big-right{ align-self:flex-end; }
 
@@ -247,7 +245,7 @@ main{
   display:flex;
   gap: clamp(24px, 2vw, 40px);
   align-items:flex-end;
-  width: clamp(520px, 44vw, 704px); /* аккуратно масштабируем центр */
+  width: clamp(520px, 44vw, 704px);
 }
 .thumb{
   position:relative;
@@ -257,7 +255,7 @@ main{
   background:#E9E9E4;
   box-shadow:0 .5rem 1.2rem #00000010;
   border-radius:4px;
-  transform: translateY(calc(var(--thumb-lift) * -1)); /* держим общий низ */
+  transform: translateY(calc(var(--thumb-lift) * -1)); 
 }
 .slide{
   position:absolute; inset:0;
