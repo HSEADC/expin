@@ -6,6 +6,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'HandilPro';
   src: url('../fonts/HandilPro-Medium.woff') format('opentype');
@@ -13,21 +14,22 @@
   font-style: normal;
   font-display: swap;
 }
+
+
 @font-face {
-  font-family: 'Idealist';
-  src: url('../fonts/IdealistSans-Light.woff') format('truetype');
+  font-family: 'Newton';
+  src: url('../fonts/ofont.ru_Newton.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
 body {
-  font-family: 'Idealist', system-ui, -apple-system, sans-serif;
+  font-family: 'Newton', system-ui, -apple-system, sans-serif;
   font-weight: 400;
 }
 
 h1, h2, h3, .headline, .big {
-  font-family: 'HandilPro', 'Idealist', sans-serif;
+  font-family: 'HandilPro', 'Newton', sans-serif;
   font-weight: 700;
 }

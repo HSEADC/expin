@@ -1,5 +1,6 @@
  import '../stylesheets/style.css'
 
+
  
 (function initThumbRotators() {
     const thumbs = document.querySelectorAll('.thumb');
