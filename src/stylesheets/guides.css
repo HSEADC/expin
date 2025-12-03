@@ -1,0 +1,55 @@
+/* ===== Страница гайдов ===== */
+
+.guides-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Главный заголовок */
+  .guides-title {
+    font-family: 'HandilPro', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  /* Подзаголовок */
+  .guides-subtitle {
+    font-family: 'Newton', serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  /* Список гайдов в столбик */
+  .guides-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  /* ссылки-гайды */
+  .guide-link {
+    font-family: 'Newton', serif;
+    font-size: clamp(18px, 2vw, 22px);
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+  }
+  
+  .guide-link:hover {
+    opacity: 0.6;
+  }
+  
