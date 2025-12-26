@@ -1,0 +1,311 @@
+/* ===== base ===== */
+:root{
+    --bg: #F3F3F0;
+    --paper: #F7F7F2;
+    --ink: #111111;
+    --muted: rgba(17,17,17,.72);
+    --line: rgba(17,17,17,.16);
+  
+    --y: #FFFF5D;
+    --g: #7CFF6A;
+    --b: #4F73FF;
+    --p: #FF4B86;
+    --w: #F3F3F0;
+    --k: #111111;
+    --gr: #D9D9D3;
+  }
+  
+  *{ box-sizing: border-box; }
+  html, body{ height: 100%; }
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Newton", serif;
+  }
+  
+  /* ===== top bar ===== */
+  .sgTop{
+    background: var(--y);
+    width: 100%;
+    padding: 18px 16px;
+  }
+  .sgTop__inner{
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+  }
+  .sgTop__title{
+    margin: 0;
+    font-family: "Handil Pro", "Newton", sans-serif;
+    font-weight: 800;
+    letter-spacing: .03em;
+    font-size: clamp(18px, 2.2vw, 26px);
+  }
+  
+  /* ===== page / sheet ===== */
+  .sgPage{
+    width: 100%;
+    padding: 18px 0 44px;
+  }
+  
+  .sgSheet{
+    width: min(720px, 92vw);
+    margin: 0 auto;
+    background: var(--paper);
+    padding: clamp(18px, 3vw, 34px);
+  }
+  
+  /* ===== typography ===== */
+  .sgH2{
+    margin: 0 0 10px;
+    font-family: "Handil Pro", "Newton", sans-serif;
+    font-weight: 800;
+    font-size: clamp(18px, 2.0vw, 22px);
+    letter-spacing: .01em;
+  }
+  .sgH3{
+    margin: 16px 0 8px;
+    font-family: "Handil Pro", "Newton", sans-serif;
+    font-weight: 800;
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+  .sgP{
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 420px; /* как в рефе — узкая колонка текста */
+  }
+  .sgSection{
+    padding: 14px 0 18px;
+  }
+  .sgCap{
+    margin: 8px 0 0;
+    font-size: 11px;
+    line-height: 1.35;
+    color: rgba(17,17,17,.55);
+  }
+  .sgCap--under{ margin-top: 10px; }
+  
+  /* ===== list ===== */
+  .sgList{
+    margin: 0 0 8px;
+    padding-left: 18px;
+    max-width: 420px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  
+  /* ===== image grids ===== */
+  .sgGrid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 12px;
+    max-width: 520px;
+  }
+  .sgFig{ margin: 0; }
+  .sgImgBox{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.35);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .sgImgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .sgImgRow{
+    margin-top: 10px;
+    max-width: 520px;
+  }
+  .sgImgBox--wide{
+    aspect-ratio: 16 / 10;
+  }
+  
+  /* ===== logo ===== */
+  .sgLogoBox{
+    max-width: 520px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.35);
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    margin-top: 12px;
+  }
+  .sgLogoBox img{
+    width: min(520px, 86%);
+    height: auto;
+    display: block;
+  }
+  
+  /* ===== logo color grid (2 x 3) ===== */
+  .sgLogoColors{
+    max-width: 520px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .sgLogoColor{
+    border: 1px solid var(--line);
+    height: 56px;
+    display: grid;
+    place-items: center;
+    font-family: "Handil Pro", "Newton", sans-serif;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+  .sgLogoColor span{ transform: translateY(1px); }
+  
+  .sgLogoColor--y{ background: var(--y); }
+  .sgLogoColor--g{ background: var(--g); }
+  .sgLogoColor--b{ background: var(--b); }
+  .sgLogoColor--p{ background: var(--p); }
+  .sgLogoColor--w{ background: var(--w); }
+  .sgLogoColor--k{ background: var(--k); color: #fff; }
+  
+  /* ===== swatches ===== */
+  .sgSwatches{
+    max-width: 520px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .sgSwatches--base{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .sgSwatch{
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.25);
+  }
+  .sgSwatch__chip{
+    height: 54px;
+  }
+  .sgSwatch__meta{
+    padding: 10px 10px 9px;
+  }
+  .sgSwatch__name{
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .sgSwatch__code{
+    font-size: 11px;
+    color: rgba(17,17,17,.55);
+  }
+  
+  .sgSwatch__chip--y{ background: var(--y); }
+  .sgSwatch__chip--g{ background: var(--g); }
+  .sgSwatch__chip--b{ background: var(--b); }
+  .sgSwatch__chip--p{ background: var(--p); }
+  .sgSwatch__chip--k{ background: var(--k); }
+  .sgSwatch__chip--w{ background: var(--w); }
+  .sgSwatch__chip--gr{ background: var(--gr); }
+  
+  /* ===== photo ===== */
+  .sgPhotoBox{
+    max-width: 520px;
+    border: 1px solid var(--line);
+    margin-top: 12px;
+    overflow: hidden;
+  }
+  .sgPhotoBox img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* ===== tables ===== */
+  .sgTableWrap{
+    max-width: 520px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.25);
+    overflow: hidden;
+  }
+  .sgTable{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+  }
+  .sgTable th,
+  .sgTable td{
+    padding: 10px 10px;
+    border-bottom: 1px solid rgba(17,17,17,.10);
+    text-align: left;
+  }
+  .sgTable thead th{
+    font-weight: 800;
+    background: rgba(255,255,255,.18);
+  }
+  .sgTable tbody tr:last-child td{ border-bottom: 0; }
+  
+  /* ===== bottom links ===== */
+  .sgFoot{
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(17,17,17,.10);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 11px;
+  }
+  .sgFoot a{
+    color: rgba(17,17,17,.7);
+    text-decoration: none;
+  }
+  .sgFoot a:hover{ opacity: .6; }
+  
+  /* ===== responsive ===== */
+  @media (max-width: 560px){
+    .sgGrid2{ grid-template-columns: 1fr; }
+    .sgSwatches{ grid-template-columns: repeat(2, 1fr); }
+    .sgSwatches--base{ grid-template-columns: repeat(2, 1fr); }
+    .sgP, .sgList, .sgGrid2, .sgLogoBox, .sgLogoColors, .sgSwatches, .sgTableWrap, .sgPhotoBox{
+      max-width: 100%;
+    }
+  }
+/* ===== typography images — чисто, без рамок ===== */
+.sgTypeImgs{
+    max-width: 640px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  /* контейнер БЕЗ рамки */
+  .sgImgBox--type{
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* сама картинка */
+  .sgImgBox--type img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .sgImgBox--type{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .sgSection{
+    padding-top: 48px;    /* вместо 80–120 */
+    padding-bottom: 64px;
+  } 
