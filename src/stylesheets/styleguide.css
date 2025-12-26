@@ -76,7 +76,7 @@
     font-size: 12px;
     line-height: 1.55;
     color: var(--muted);
-    max-width: 420px; /* как в рефе — узкая колонка текста */
+    max-width: 420px; 
   }
   .sgSection{
     padding: 14px 0 18px;
@@ -276,7 +276,7 @@
       max-width: 100%;
     }
   }
-/* ===== typography images — чисто, без рамок ===== */
+
 .sgTypeImgs{
     max-width: 640px;
     display: grid;
@@ -285,7 +285,7 @@
     margin-top: 24px;
   }
   
-  /* контейнер БЕЗ рамки */
+
   .sgImgBox--type{
     background: transparent;
     padding: 0;
@@ -293,7 +293,7 @@
     box-shadow: none;
   }
   
-  /* сама картинка */
+  
   .sgImgBox--type img{
     display: block;
     width: 100%;
@@ -306,6 +306,6 @@
   }
   
   .sgSection{
-    padding-top: 48px;    /* вместо 80–120 */
+    padding-top: 48px;   
     padding-bottom: 64px;
   } 

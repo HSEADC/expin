@@ -641,7 +641,7 @@ body {
 
 
 /* ===== FOOTER FULLSCREEN ===== */
-/* ===== FOOTER более компактный + адаптивный ===== */
+
 .siteFooter{
   min-height: 100vh;
   background: #F3F3F0;
@@ -663,7 +663,7 @@ body {
   display: flex;
   gap: clamp(12px, 2vw, 28px);
   align-items: center;
-  justify-content: space-around; /* мягче, чем space-between */
+  justify-content: space-around; 
 }
 
 .siteFooter__nav a{
@@ -678,7 +678,7 @@ body {
   display: block;
 }
 
-/* центр: логотип-картинка + акула */
+
 .siteFooter__brand{
   position: relative;
   display: grid;
@@ -706,7 +706,7 @@ body {
   pointer-events: none;
 }
 
-/* прыжок как у тебя в hero */
+
 @keyframes footerSharkJump{
   0%   { transform: translateY(0) rotate(-6deg); }
   40%  { transform: translateY(-14px) rotate(5deg); }
@@ -714,7 +714,6 @@ body {
   100% { transform: translateY(0) rotate(-6deg); }
 }
 
-/* низ */
 .siteFooter__bottom{
   display: grid;
   grid-template-columns: 1fr 1.6fr 1fr;
@@ -729,7 +728,7 @@ body {
 .siteFooter__bottomCenter{ justify-self: center; text-align: center; }
 .siteFooter__bottomRight{ justify-self: end; }
 
-/* адаптация */
+
 @media (max-width: 760px){
   .siteFooter__nav{
     justify-content: center;
