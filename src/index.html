@@ -37,34 +37,55 @@
         <a class="siteMenu__brand" href="./index.html">
           <img src="./img/A_LogoHeader.png" alt="EXPIN" class="siteMenu__logo">
         </a>
-    
-        <div class="siteMenu__links">
-          <a href="./index.html">Главная</a>
-          <a href="./pages/articles.html">Статьи</a>
-          <a href="./pages/guides.html">Гайды</a>
-          <a href="./pages/tests.html">Тест</a>
-        </div>
-    
-        <a class="siteMenu__tg"
-           href="https://t.me/ex_pin"
-           target="_blank"
-           rel="noopener"
-           aria-label="Telegram">
-          <img src="./img/tg.svg" alt="Telegram">
-        </a>
+
+      <div class="siteMenu__links">
+        <a href="./index.html">Главная</a>
+        <a href="./pages/articles.html">Статьи</a>
+        <a href="./pages/guides.html">Гайды</a>
+        <a href="./pages/tests.html">Тест</a>
+      </div>
+
+      <a class="siteMenu__tg" href="https://t.me/ex_pin" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="./img/tg.svg" alt="Telegram">
+      </a>
+
+      <button class="siteMenu__burger" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       </div>
     </nav>
+    <div class="mobileMenu" id="mobileMenu">
+  <button class="mobileMenu__close" type="button" aria-label="Закрыть меню">×</button>
 
+  <a href="./index.html">Главная</a>
+  <a href="./pages/articles.html">Статьи</a>
+  <a href="./pages/guides.html">Гайды</a>
+  <a href="./pages/tests.html">Тесты</a>
+  
+</div>
     
     <div class="stack" id="stack">
 
       <!-- ===== PANEL 1: HERO ===== -->
       <section class="panel panel--hero" id="panel1">
         <section class="hero hero--expin">
-          <img class="hero__collage"
-               src="./img/img_webp/Group 2087329230.webp"
-               alt=""
-               aria-hidden="true"/>
+          <img class="hero__collage hero__collage--desktop"
+            src="./img/img_webp/Group 2087329230.webp"
+            alt=""
+            aria-hidden="true"/>
+
+        <img class="hero__collage hero__collage--mobile"
+            src="./img/hero-mobile.png"
+            alt=""
+            aria-hidden="true"/>
+
+            <img class="hero__sharkMobile"
+                  src="./img/shark-mobile.png"
+                  alt=""
+                  aria-hidden="true">
 
           <div class="hero__logoWrap">
             <img class="hero__logo"
@@ -85,8 +106,14 @@
     <div class="s2__stage">
       <!-- Один div с резиновой картинкой по центру -->
       <div class="s2__single-image">
-        <img src="./img/O_ArticleMainPage.png" alt="Description" />
-      </div>
+    <img class="s2__image s2__image--desktop"
+       src="./img/O_ArticleMainPage.png"
+       alt="Description" />
+
+    <img class="s2__image s2__image--mobile s2__image--mobile-main"
+       src="./img/second-mainscreen-mobile.png"
+       alt="Description" />
+  </div>
     </div>
   </section>
 </section>
@@ -212,7 +239,7 @@
            src="./img/img_webp/Expin copy.webp"
            alt="EXPIN">
     
-      <img class="siteFooter__shark"
+      <img class="siteFooter__shark siteFooter__shark--mobilePlace"
            src="./img/img_webp/63f488226dac27e65e9b001f4ec0516c-Photoroom.webp"
            alt=""
            aria-hidden="true">
