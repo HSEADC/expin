@@ -123,8 +123,8 @@
   width: clamp(90px, 8vw, 140px);
 }
 .articlesCardsBlock__bg--2{
-  left: 80px;
-  bottom: 120px;
+  left: 120px;
+  bottom: 110px;
   width: clamp(80px, 7vw, 120px);
 }
 .articlesCardsBlock__bg--3{
@@ -412,16 +412,6 @@
   transition: opacity .25s ease, transform .25s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
 .articlesStack{
   position: relative;
   height: 255vh;
@@ -449,7 +439,3 @@
   transform: translateY(100%);
   will-change: transform;
 }
-
-
-
-

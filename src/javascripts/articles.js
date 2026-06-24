@@ -3,14 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const layer = document.getElementById('cursorLayer');
   const preloadImages = document.querySelectorAll('.articlesHero__preload img');
 
-  console.log('hero:', hero);
-  console.log('layer:', layer);
-  console.log('preloadImages:', preloadImages.length);
-
   if (!hero || !layer || !preloadImages.length) return;
 
   const images = Array.from(preloadImages).map((img) => img.src);
+  const isMobile = window.matchMedia('(max-width: 780px)').matches;
 
+  if (isMobile) {
+    initMobileArticleClusters(hero, layer, images);
+    return;
+  }
+
+  initDesktopArticleCursor(hero, layer, images);
+});
+
+function initDesktopArticleCursor(hero, layer, images) {
   let imageIndex = 0;
   let repeatCount = 0;
   let lastX = -999;
@@ -25,55 +31,137 @@ document.addEventListener('DOMContentLoaded', () => {
     const dy = y - lastY;
     const dist = Math.sqrt(dx * dx + dy * dy);
 
-    // чтобы хвост не был слишком плотным
     if (dist < 18) return;
 
     lastX = x;
     lastY = y;
 
-    const item = document.createElement('div');
-    item.className = 'articlesHero__trailItem';
-    item.style.left = `${x}px`;
-    item.style.top = `${y}px`;
-    item.style.backgroundImage = `url("${images[imageIndex]}")`;
-    item.style.transform = `translate(-50%, -50%) rotate(${randomBetween(-18, 18)}deg)`;
+    createArticleTrailItem(
+      layer,
+      images[imageIndex],
+      x,
+      y,
+      null,
+      randomBetween(-18, 18),
+      700
+    );
 
-    layer.appendChild(item);
-
-    // каждая картинка 4 раза подряд
     repeatCount += 1;
+
     if (repeatCount >= 4) {
       repeatCount = 0;
       imageIndex += 1;
-      if (imageIndex >= images.length) imageIndex = 0;
+
+      if (imageIndex >= images.length) {
+        imageIndex = 0;
+      }
     }
 
-    // плавное исчезновение
-    setTimeout(() => {
-      item.classList.add('is-fade');
-    }, 250);
-
-    setTimeout(() => {
-      if (item.parentNode) item.parentNode.removeChild(item);
-    }, 700);
-
-    // ограничиваем хвост
-    const items = layer.querySelectorAll('.articlesHero__trailItem');
-    if (items.length > 24) {
-      const first = items[0];
-      if (first.parentNode) first.parentNode.removeChild(first);
-    }
+    limitTrailItems(layer, 24);
   });
 
   hero.addEventListener('mouseleave', () => {
     layer.innerHTML = '';
   });
-});
+}
+
+function initMobileArticleClusters(hero, layer, images) {
+  const clusters = [
+    [
+      { x: 36, y: 19, size: 110, rotate: -12 },
+      { x: 44, y: 18, size: 112, rotate: 8 },
+      { x: 53, y: 20, size: 118, rotate: -6 }
+    ],
+    [
+      { x: 68, y: 23, size: 96, rotate: 10 },
+      { x: 74, y: 30, size: 104, rotate: -8 },
+      { x: 70, y: 37, size: 98, rotate: 6 }
+    ],
+    [
+      { x: 59, y: 61, size: 108, rotate: -8 },
+      { x: 67, y: 66, size: 116, rotate: 10 },
+      { x: 72, y: 71, size: 108, rotate: -5 }
+    ]
+  ];
+
+  let clusterIndex = 0;
+  let imageIndex = 0;
+
+  function showCluster() {
+    const cluster = clusters[clusterIndex];
+
+    cluster.forEach((point, index) => {
+      const image = images[(imageIndex + index) % images.length];
+
+      setTimeout(() => {
+        createArticleTrailItem(
+          layer,
+          image,
+          (point.x / 100) * hero.clientWidth,
+          (point.y / 100) * hero.clientHeight,
+          point.size,
+          point.rotate,
+          1800
+        );
+      }, index * 120);
+    });
+
+    imageIndex += cluster.length;
+    clusterIndex += 1;
+
+    if (clusterIndex >= clusters.length) {
+      clusterIndex = 0;
+    }
+
+    limitTrailItems(layer, 18);
+  }
+
+  showCluster();
+
+  window.articleClusterInterval = setInterval(showCluster, 1900);
+}
+
+function createArticleTrailItem(layer, image, x, y, size, rotate, lifetime) {
+  const item = document.createElement('div');
+
+  item.className = 'articlesHero__trailItem';
+  item.style.left = `${x}px`;
+  item.style.top = `${y}px`;
+  item.style.backgroundImage = `url("${image}")`;
+  item.style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
+
+  if (size !== null) {
+    item.style.width = `${size}px`;
+  }
+
+  layer.appendChild(item);
+
+  setTimeout(() => {
+    item.classList.add('is-fade');
+  }, lifetime * 0.55);
+
+  setTimeout(() => {
+    if (item.parentNode) {
+      item.parentNode.removeChild(item);
+    }
+  }, lifetime);
+}
+
+function limitTrailItems(layer, maxItems) {
+  const items = layer.querySelectorAll('.articlesHero__trailItem');
+
+  if (items.length <= maxItems) return;
+
+  const extraCount = items.length - maxItems;
+
+  for (let i = 0; i < extraCount; i += 1) {
+    items[i].remove();
+  }
+}
 
 function randomBetween(min, max) {
   return Math.random() * (max - min) + min;
 }
-
 
 
 

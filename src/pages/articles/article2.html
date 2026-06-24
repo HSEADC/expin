@@ -12,25 +12,42 @@
 
   <!-- ===== FIXED MENU ===== -->
   <nav class="siteMenu" aria-label="Меню разделов">
-    <div class="siteMenu__inner">
-      <a class="siteMenu__brand" href="../../index.html">EXPIN</a>
+  <div class="siteMenu__inner">
+    <a class="siteMenu__brand" href="../../index.html">
+      <img src="../../img/A_LogoHeader.png" alt="EXPIN" class="siteMenu__logo">
+    </a>
 
-      <div class="siteMenu__links">
-        <a href="../../index.html">Главная</a>
-        <a href="../articles.html">Статьи</a>
-        <a href="../guides.html">Гайды</a>
-        <a href="../tests.html">Тест</a>
-      </div>
-
-      <a class="siteMenu__tg"
-         href="https://t.me/ex_pin"
-         target="_blank"
-         rel="noopener"
-         aria-label="Telegram">
-        <img src="../../img/tg.svg" alt="">
-      </a>
+    <div class="siteMenu__links">
+      <a href="../../index.html">Главная</a>
+      <a href="../articles.html">Статьи</a>
+      <a href="../guides.html">Гайды</a>
+      <a href="../tests.html">Тест</a>
     </div>
-  </nav>
+
+    <a class="siteMenu__tg"
+       href="https://t.me/ex_pin"
+       target="_blank"
+       rel="noopener"
+       aria-label="Telegram">
+      <img src="../../img/tg.svg" alt="Telegram">
+    </a>
+
+    <button class="siteMenu__burger" type="button" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobileMenu" id="mobileMenu">
+  <button class="mobileMenu__close" type="button" aria-label="Закрыть меню">×</button>
+
+  <a href="../../index.html">Главная</a>
+  <a href="../articles.html">Статьи</a>
+  <a href="../guides.html">Гайды</a>
+  <a href="../tests.html">Тесты</a>
+</div>
 
   <main class="articleDetail">
 
@@ -45,6 +62,12 @@
           src="../../img/articles/articless-all/Group 2087329336.png"
           alt=""
         >
+
+        <img
+          class="adHero__mobileImage"
+          src="../../img/orange_modile.png"
+          alt=""
+          aria-hidden="true">
 
         <img class="adHero__decor adHero__decor--1" src="../../img/articles/articless-all/_ (2) copy 3 1-Photoroom.png" alt="" aria-hidden="true">
         <img class="adHero__decor adHero__decor--2" src="../../img/articles/articless-all/a5572aaac3261577f60cca2ada4c9ecf-Photoroom.png" alt="" aria-hidden="true">

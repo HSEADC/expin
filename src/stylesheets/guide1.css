@@ -122,33 +122,76 @@
     }
   }
   
-  @media (max-width: 820px){
-    .guideScene{
-      height: 240vh;
-    }
-  
-    .guideScene__text{
-      left: 6%;
-      top: 42%;
-      width: 88vw;
-    }
-  
-    .guideScene__lead{
-      width: 280px;
-    }
-  
-    .guideScene__gallery{
-      left: 50%;
-      right: auto;
-      top: 73%;
-      width: 90vw;
-      height: 420px;
-      transform: translate(-50%, -50%);
-    }
-  
-    .guideCard{
-      width: 220px;
-    }
+  @media (max-width: 820px) {
+
+  .guideScene__lead {
+    font-size: 18px;
+    line-height: 1.25;
   }
+
+  .guideScene__title {
+    font-size: 34px;
+    line-height: 0.95;
+  }
+
+  .titleLine {
+    white-space: normal;
+  }
+  
+  .guideScene {
+    height: 240vh;
+  }
+
+  .guideScene__inner {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .guideScene__text {
+    left: 50%;
+    top: 40%;
+    width: 88vw;
+    transform: translate(-50%, -50%);
+  }
+
+  .guideScene__lead {
+    width: min(560px, 82vw);
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .guideScene__title {
+    font-size: 48px;
+    line-height: 0.9;
+  }
+
+  .guideScene__gallery{
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 3800px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+}
+
+  .guideCard {
+    width: 82vw;
+  }
+
+  .guideScene__lead {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .guideScene__title {
+    font-size: 32px;
+    line-height: 0.95;
+  }
+
+  .titleLine {
+    white-space: normal;
+  }
+
+}
 
   
