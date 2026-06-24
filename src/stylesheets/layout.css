@@ -756,6 +756,9 @@ body {
 }
 
 .siteFooter__nav{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
   display: flex;
   gap: clamp(12px, 2vw, 28px);
   align-items: center;

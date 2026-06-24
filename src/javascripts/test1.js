@@ -78,7 +78,7 @@ const QUIZ = [
   },
 
   // БЛОК 2
-  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ НАХОДИШЬ ВДОХНОВЕНИЕ?', id: 6, type: 'multi', maxSelect: 3,
+  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ ВДОХНОВЛЯЕШЬСЯ?', id: 6, type: 'multi', maxSelect: 3,
     text: '6. Где ты чаще всего находишь вдохновение?',
     options: [
       { key: 'A', label: 'В случайных мелочах' },
@@ -89,7 +89,7 @@ const QUIZ = [
       { key: 'F', label: 'В природе' },
     ],
   },
-  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ НАХОДИШЬ ВДОХНОВЕНИЕ?', id: 7, type: 'single',
+  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ ВДОХНОВЛЯЕШЬСЯ?', id: 7, type: 'single',
     text: '7. Если чувствуешь выгорание, ты…',
     options: [
       { key: 'A', label: 'Уходишь в тишину' },
@@ -98,11 +98,11 @@ const QUIZ = [
       { key: 'D', label: 'Анализируешь, что пошло не так' },
     ],
   },
-  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ НАХОДИШЬ ВДОХНОВЕНИЕ?', id: 8, type: 'scale',
+  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ ВДОХНОВЛЯЕШЬСЯ?', id: 8, type: 'scale',
     text: '8. Насколько часто тебя вдохновляет повседневность?',
     min: 1, max: 10, leftLabel: '1 — почти никогда', rightLabel: '10 — очень часто',
   },
-  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ НАХОДИШЬ ВДОХНОВЕНИЕ?', id: 9, type: 'single',
+  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ ВДОХНОВЛЯЕШЬСЯ?', id: 9, type: 'single',
     text: '9. Что чаще становится отправной точкой идеи?',
     options: [
       { key: 'A', label: 'Деталь' },
@@ -111,7 +111,7 @@ const QUIZ = [
       { key: 'D', label: 'Форма' },
     ],
   },
-  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ НАХОДИШЬ ВДОХНОВЕНИЕ?', id: 10, type: 'single',
+  { blockLabel: 'БЛОК 2.', blockTitle: 'КАК ТЫ ВДОХНОВЛЯЕШЬСЯ?', id: 10, type: 'single',
     text: '10. Когда видишь что-то интересное, ты…',
     options: [
       { key: 'A', label: 'Сохраняешь' },

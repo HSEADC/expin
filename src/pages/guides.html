@@ -19,23 +19,35 @@
         <a class="siteMenu__brand" href="./index.html">
           <img src="../img/A_LogoHeader.png" alt="EXPIN" class="siteMenu__logo">
         </a>
-    
-        <div class="siteMenu__links">
-          <a href="../index.html">Главная</a>
-          <a href="./articles.html">Статьи</a>
-          <a href="./guides.html">Гайды</a>
-          <a href="./tests.html">Тест</a>
-        </div>
-    
-        <a class="siteMenu__tg"
-           href="https://t.me/ex_pin"
-           target="_blank"
-           rel="noopener"
-           aria-label="Telegram">
-          <img src="../img/tg.svg" alt="Telegram">
-        </a>
+
+      <div class="siteMenu__links">
+        <a href="../index.html">Главная</a>
+        <a href="../pages/articles.html">Статьи</a>
+        <a href="../pages/guides.html">Гайды</a>
+        <a href="../pages/tests.html">Тест</a>
+      </div>
+
+      <a class="siteMenu__tg" href="https://t.me/ex_pin" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="../img/tg.svg" alt="Telegram">
+      </a>
+
+      <button class="siteMenu__burger" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       </div>
     </nav>
+    <div class="mobileMenu" id="mobileMenu">
+  <button class="mobileMenu__close" type="button" aria-label="Закрыть меню">×</button>
+
+  <a href="../index.html">Главная</a>
+  <a href="../pages/articles.html">Статьи</a>
+  <a href="../pages/guides.html">Гайды</a>
+  <a href="../pages/tests.html">Тесты</a>
+  
+</div>
 
 <main class="articlesPage">
   
@@ -68,41 +80,76 @@
     </div>
   </section>
   <section class="guidesShowcase" id="guidesShowcase">
-    <div class="guidesShowcase__inner">
-  
-      <div class="guidesShowcase__left">
-        <div class="guidesShowcase__brand">EXPIN</div>
-  
-        <h2 class="guidesShowcase__title">ВСЕ ГАЙДЫ</h2>
-  
-        <div class="guidesShowcase__desc">
-          <div>СПОСОБЫ ГЕНЕРАЦИИ ИДЕЙ</div>
-          <div>ЧТОБЫ РАЗВЕТСЯ</div>
-          <div>ДЛЯ ТРЕНИРОВКИ ВИДЕНИЯ</div>
-        </div>
-      </div>
-  
-      <div class="guidesStackWrap">
-
-        <div class="guidesStack" id="guidesStack">
-  
-          <a class="guideSlide" href="../pages/guides/guid1.html" data-index="0">
-            <img src="../img/guide/guide1.webp" alt="Проводи дни без стимуляций">
-          </a>
-  
-          <a class="guideSlide" href="../pages/guides/guid2.html" data-index="1">
-            <img src="../img/guide/guide2.webp" alt="Создай атмосферу вокруг себя">
-          </a>
-  
-          <a class="guideSlide" href="../pages/guides/guide3.html" data-index="2">
-            <img src="../img/guide/guide3.webp" alt="Находи прекрасные мелочи в повседневности">
-          </a>
-  
-          <a class="guideSlide" href="../pages/guides/guid4.html" data-index="3">
-            <img src="../img/guide/guide4.webp" alt="Ещё один гайд">
-          </a>
-  
-        </div>
+      <div class="articlesCardsBlock__inner">
+    
+        <p class="articlesCardsBlock__topText">
+         <span>ДАННЫЕ ГАЙДЫ СОЗДАНЫ ДЛЯ ТОГО, ЧТО БЫ ВЫ НИКОГДА</span> 
+          <span>НЕ ЗАБЫВАЛИ,</span>
+        </p>
+    
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--1" src="../img/1212 2.png" alt="" aria-hidden="true">
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--2" src="../img/65f0bee7629bcce3a7002e0c3eb46996-Photoroom 1.png" alt="" aria-hidden="true">
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--3" src="../img/974126511.png" alt="" aria-hidden="true">
+        <img class="articlesCardsBlock__bg articlesCardsBlock__bg--4" src="../img/9999 1.png" alt="" aria-hidden="true">
+    
+        <div class="articlesSlider" id="articlesSlider">
+          <div class="articlesSlider__track" id="articlesSliderTrack">
+    
+            <a class="articleSlide" href="../pages/guides/guid2.html" data-index="0">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/greenguides_desk.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Находи прекрасные мелочи в повседневности</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/guides/guide3.html" data-index="1">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/flowerguides_desk.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Проводи дни без стимуляций</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/guides/guid1.html" data-index="2">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/appleguides_desk.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">Создавай атмосферу вокруг себя</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+    
+            <a class="articleSlide" href="../pages/guides/guid4.html" data-index="3">
+              <div class="articleSlide__media">
+                <img class="articleSlide__img" src="../img/sofaguides_desk.png" alt="">
+              </div>
+              <div class="articleSlide__body">
+                <h3 class="articleSlide__title">POMODORO<br>25/5</h3>
+              </div>
+              <div class="articleSlide__cta">
+                <div class="articleSlide__btn">перейти <span aria-hidden="true">→</span></div>
+              </div>
+            </a>
+            </div>
+        
+    
+        <p class="articlesCardsBlock__bottomText">
+          ЧТО УРОНИВ БОЛЬШУЮ ИДЕЮ НА ПОЛ, ВЫ МОЖЕТЕ НАЙТИ ТАМ<br>
+          МАЛЕНЬКУЮ, КОТОРАЯ ПОДОЙДЁТ ЛУЧШЕ!
+        </p>
+    
       </div>
   
    
@@ -128,7 +175,7 @@
            alt="EXPIN">
     
       <img class="siteFooter__shark"
-           src="../img/img_webp/63f488226dac27e65e9b001f4ec0516c-Photoroom.webp"
+           src="../img/shark-mobile.png"
            alt=""
            aria-hidden="true">
     </div>

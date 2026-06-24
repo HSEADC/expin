@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scene = document.getElementById('guideScene');
   const text = document.getElementById('guideText');
   const cards = Array.from(document.querySelectorAll('.guideCard'));
+  const isMobile = window.matchMedia('(max-width: 820px)').matches;
 
   if (!scene || !text || !cards.length) return;
 
@@ -159,9 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     /* КАРТИНКИ: стартуют позже */
     const cardsProgress = clamp01((p - 0.05) / 0.82);
   
-    const spacing = 560;
-    const start = 1300;
-    const flow = -2450 * cardsProgress;
+    let spacing = 560;
+    let start = 1300;
+    let flow = -2450 * cardsProgress;
+
+    if (isMobile) {
+      spacing = 450;
+      start = 500;
+}
   
     cards.forEach((card, index) => {
       const appear = clamp01((cardsProgress - index * 0.10) / 0.34);
